@@ -17,10 +17,16 @@ giacomo = 10
 
 console.log(giacomo)
 
-let outside = 3
+/* let outside = 3
 
 { let inside = 2;
     console.log(outside)
     console.log(inside)
 } console.log(outside)
-    console.log(inside)
+    console.log(inside) */
+
+for (let i = 0; i <= 20; i++) {
+        if (i % 2 === 0) {
+            console.log(i);
+        }
+    }   
