@@ -30,3 +30,12 @@ for (let i = 0; i <= 20; i++) {
             console.log(i);
         }
     }   
+
+let numero = 10;
+
+    while (numero > 0) {
+        if (numero % 2 !== 0) {
+            console.log(numero);
+        }
+        numero--;
+    }
