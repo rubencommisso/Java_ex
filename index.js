@@ -39,3 +39,5 @@ let numero = 10;
         }
         numero--;
     }
+
+let word = prompt("Inserisci una parola");
