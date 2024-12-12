@@ -40,5 +40,13 @@ let numero = 10;
         numero--;
     }
 
-let word = prompt("Inserisci una parola");
-console.log(word.length);
+/* let word = prompt("Inserisci una parola");
+console.log(word.length); */
+
+let word;
+
+do {
+    word = prompt("Inserisci una parola di almeno 5 caratteri:");
+} while (word.length < 5);
+
+console.log("Hai inserito la parola: " + word);
