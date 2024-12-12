@@ -41,3 +41,4 @@ let numero = 10;
     }
 
 let word = prompt("Inserisci una parola");
+console.log(word.length);
