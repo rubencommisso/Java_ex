@@ -8,3 +8,11 @@ let number = 5
 {let number = 6; 
     console.log(number)
 } console.log(number)
+
+let giacomo = 9
+
+console.log(giacomo)
+
+giacomo = 10
+
+console.log(giacomo)
