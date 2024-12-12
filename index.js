@@ -16,3 +16,11 @@ console.log(giacomo)
 giacomo = 10
 
 console.log(giacomo)
+
+let outside = 3
+
+{ let inside = 2;
+    console.log(outside)
+    console.log(inside)
+} console.log(outside)
+    console.log(inside)
