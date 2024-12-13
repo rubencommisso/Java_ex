@@ -59,7 +59,7 @@ if (number > 5) {
     console.log ("la variabile è minore di 5");
 } */
 
-    let input = prompt("Inserisci il tuo punteggio:");
+   /*  let input = prompt("Inserisci il tuo punteggio:");
 
     let score = parseInt(input, 10);
 
@@ -83,7 +83,12 @@ if (number > 5) {
                 console.log("Il punteggio inserito non è valido.");
                 break;
         }
-    }
+    } */
+
+let lista = [1,2,3,4,5];
+console.log(lista)
+
+    
 
 
 
