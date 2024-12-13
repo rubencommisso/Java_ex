@@ -66,16 +66,22 @@ if (number > 5) {
     if (isNaN(score)) {
         console.log("L'input inserito non è un numero valido.");
     } else {
-        if (score >= 90 && score <= 100) {
-            console.log("voto ottimo");
-        } else if (score >= 70 && score <= 89) {
-            console.log("voto buono");
-        } else if (score >= 60 && score <= 69) {
-            console.log("voto sufficiente");
-        } else if (score <= 59) {
-            console.log("voto insufficiente");
-        } else {
-            console.log("Il punteggio inserito non è valido.");
+        switch (true) {
+            case (score >= 90 && score <= 100):
+                console.log("voto ottimo");
+                break;
+            case (score >= 70 && score <= 89):
+                console.log("voto buono");
+                break;
+            case (score >= 60 && score <= 69):
+                console.log("voto sufficiente");
+                break;
+            case (score <= 59):
+                console.log("voto insufficiente");
+                break;
+            default:
+                console.log("Il punteggio inserito non è valido.");
+                break;
         }
     }
 
