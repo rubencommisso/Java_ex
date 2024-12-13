@@ -97,4 +97,10 @@ for (let i=0; i < lista.length; i++)  {
 console.log(somma)
 
 
+let reverse = []
 
+for (let i=lista.length -1; i>=0; i--) {
+    reverse.push(lista[i])
+} 
+
+console.log(reverse)
