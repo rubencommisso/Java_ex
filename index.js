@@ -88,7 +88,13 @@ if (number > 5) {
 let lista = [1,2,3,4,5];
 console.log(lista)
 
-    
+let somma = 0
+
+for (let i=0; i < lista.length; i++)  {
+    somma += lista[i]
+} 
+
+console.log(somma)
 
 
 
