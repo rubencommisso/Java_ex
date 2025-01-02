@@ -128,4 +128,6 @@ let person = {
     city: "Torino",
 };
 
+person.age = 15;
+
 console.log(person.age)
