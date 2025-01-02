@@ -85,7 +85,7 @@ if (number > 5) {
         }
     } */
 
-let lista = [1,2,3,4,5];
+/* let lista = [1,2,3,4,5];
 console.log(lista)
 
 let somma = 0
@@ -103,4 +103,21 @@ for (let i=lista.length -1; i>=0; i--) {
     reverse.push(lista[i])
 } 
 
-console.log(reverse)
+console.log(reverse) */
+
+
+
+let parole = [];
+
+
+for (let i = 0; i < 5; i++) {
+    let parola = prompt("Inserisci una parola:");
+    parole.push(parola);
+}
+
+
+for (let i = 0; i < parole.length; i++) {
+    if (parole[i].length % 2 !== 0) {
+        console.log(parole[i]);
+    }
+}
