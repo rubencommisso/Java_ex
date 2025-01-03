@@ -125,9 +125,10 @@ for (let i = 0; i < parole.length; i++) {
 let person = {
     name : "Carlo",
     age : 14,
-    city: "Torino",
+    city : "Torino",
+    job : "briklayer",
 };
 
-person.age = 15;
+person.age = 50;
 
-console.log(person.age)
+console.log(person.job)
