@@ -131,4 +131,8 @@ let person = {
 
 person.age = 50;
 
-console.log(person.job)
+/* console.log(person.job) */
+
+for (let property in person) {
+    console.log(`${property}: ${person[property]}`);
+}
