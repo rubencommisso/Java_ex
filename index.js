@@ -149,7 +149,7 @@ for (let property in person) {
     console.log(addWith5(3)); 
     console.log(addWith5(10));   */ 
 
-    function outerFunction(x, initialValue) {
+/*     function outerFunction(x, initialValue) {
 
         let result = initialValue;
     
@@ -165,4 +165,29 @@ for (let property in person) {
     const adder = outerFunction(5, 10);
     console.log(adder(3)); 
     console.log(adder(7)); 
-    console.log(adder(-5));
+    console.log(adder(-5)); */
+
+
+    function createCounter() {
+
+        let count = 0;
+    
+        
+        return {
+            increment: function () {
+                count += 1; 
+                return count; 
+            },
+            decrement: function () {
+                count -= 1; 
+                return count; 
+            }
+        };
+    }
+    
+    
+    const counter = createCounter();
+    console.log(counter.increment()); 
+    console.log(counter.increment()); 
+    console.log(counter.decrement()); 
+    console.log(counter.decrement());
