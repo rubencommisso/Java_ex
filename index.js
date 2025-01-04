@@ -214,7 +214,7 @@ entries.forEach(([key, value]) => {
 }); */
 
 
-let numbers = [1, 2, 3, 4, 5];
+/* let numbers = [1, 2, 3, 4, 5];
 
 numbers.forEach(number => {
     console.log(number * 2);
@@ -222,6 +222,25 @@ numbers.forEach(number => {
 
 let squaredNumbers = numbers.map(number => number ** 2);
 
-console.log(squaredNumbers);
+console.log(squaredNumbers); */
+
+
+
+let students = [
+    { name: "Luca", grade: 75 },
+    { name: "Marco", grade: 45 },
+    { name: "Giulia", grade: 85 },
+    { name: "Sofia", grade: 55 },
+    { name: "Elena", grade: 60 }
+];
+
+let passedStudents = students.filter(student => student.grade >= 60);
+
+let firstFailedStudent = students.find(student => student.grade < 60);
+
+console.log("Passed Students:", passedStudents);
+
+console.log("First Failed Student:", firstFailedStudent);
+
 
                 
