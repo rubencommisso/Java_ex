@@ -539,7 +539,7 @@ console.log(autoElettrica.mostraChilometraggio());
 console.log(autoElettrica.verificaChilometraggio());  */
 
 
-
+/* 
 class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
@@ -598,7 +598,61 @@ console.log(auto1.mostraChilometraggio());
 console.log(auto2.mostraChilometraggio()); 
 
 
-console.log(Automobile.confrontaChilometraggio(auto1, auto2));
+console.log(Automobile.confrontaChilometraggio(auto1, auto2)); */
+
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+        this.#contatoreChiamate = 0;
+    }
+
+    
+    #contatoreChiamate;
+
+    
+    incrementaContatore() {
+        this.#contatoreChiamate++;
+        console.log(`Il metodo è stato chiamato ${this.#contatoreChiamate} volta(i).`);
+    }
+
+    
+    descrizione() {
+        this.incrementaContatore(); 
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+
+    aggiungiChilometri(km) {
+        this.incrementaContatore(); 
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+
+    mostraChilometraggio() {
+        this.incrementaContatore(); 
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+}
+
+
+const auto = new Automobile("Fiat", "500", 2020, 50000);
+
+
+console.log(auto.descrizione()); 
+console.log(auto.mostraChilometraggio()); 
+auto.aggiungiChilometri(1000); 
+console.log(auto.mostraChilometraggio()); 
+
+
 
 
 
