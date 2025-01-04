@@ -894,7 +894,7 @@ console.log(`Chilometraggio attuale tramite getter: ${auto.chilometraggioAttuale
 
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -970,7 +970,77 @@ console.log(`Chilometraggio attuale tramite getter: ${auto.chilometraggioAttuale
 
 
 auto.chilometraggioNuovo = 52000; 
-auto.chilometraggioNuovo = 51000; 
+auto.chilometraggioNuovo = 51000;  */
+
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+
+    
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+   
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+   
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+}
+
+
+class Camion extends Automobile {
+    constructor(marca, modello, anno, chilometraggio, capacitàCarico) {
+        super(marca, modello, anno, chilometraggio); 
+        this.capacitàCarico = capacitàCarico; 
+    }
+
+
+    descrizione() {
+        return `${super.descrizione()} Ha una capacità di carico di ${this.capacitàCarico} tonnellate.`;
+    }
+
+  
+    caricaCarico(peso) {
+        if (peso <= this.capacitàCarico) {
+            console.log(`Carico di ${peso} tonnellate aggiunto.`);
+        } else {
+            console.log("Carico troppo pesante per il camion!");
+        }
+    }
+
+    scaricaCarico() {
+        console.log("Carico scaricato.");
+    }
+}
+
+const mioCamion = new Camion("Mercedes", "Actros", 2022, 150000, 20);
+
+console.log(mioCamion.descrizione()); 
+
+
+mioCamion.aggiungiChilometri(500);
+console.log(mioCamion.mostraChilometraggio());
+
+
+mioCamion.caricaCarico(15); 
+mioCamion.caricaCarico(25); 
+mioCamion.scaricaCarico(); 
+
 
 
 
