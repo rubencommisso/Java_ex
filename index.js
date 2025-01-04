@@ -974,7 +974,7 @@ auto.chilometraggioNuovo = 51000;  */
 
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -1039,7 +1039,73 @@ console.log(mioCamion.mostraChilometraggio());
 
 mioCamion.caricaCarico(15); 
 mioCamion.caricaCarico(25); 
+mioCamion.scaricaCarico();  */
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+}
+
+class Camion extends Automobile {
+    constructor(marca, modello, anno, chilometraggio, capacitàCarico, caricoMassimo) {
+        super(marca, modello, anno, chilometraggio);  
+        this.capacitàCarico = capacitàCarico; 
+        this.caricoMassimo = caricoMassimo;   
+        this.caricoAttuale = 0; 
+    }
+
+    descrizione() {
+        return `${super.descrizione()} Ha una capacità di carico di ${this.capacitàCarico} tonnellate e un carico massimo di ${this.caricoMassimo} kg.`;
+    }
+
+    carica(kg) {
+        if (this.caricoAttuale + kg <= this.caricoMassimo) {
+            this.caricoAttuale += kg;
+            console.log(`Carico di ${kg} kg aggiunto. Carico attuale: ${this.caricoAttuale} kg.`);
+        } else {
+            console.log("Impossibile caricare. Il carico supera il limite massimo!");
+        }
+    }
+
+    scaricaCarico() {
+        console.log(`Carico di ${this.caricoAttuale} kg scaricato.`);
+        this.caricoAttuale = 0; 
+    }
+}
+
+const mioCamion = new Camion("Mercedes", "Actros", 2022, 150000, 20, 15000);
+
+console.log(mioCamion.descrizione());
+
+mioCamion.aggiungiChilometri(500);
+console.log(mioCamion.mostraChilometraggio()); 
+
+
+mioCamion.carica(5000); 
+mioCamion.carica(10000); 
 mioCamion.scaricaCarico(); 
+
 
 
 
