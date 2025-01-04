@@ -466,7 +466,7 @@ console.log(auto.mostraChilometraggio());
 
 console.log(auto.mostraEtà());  */
 
-
+/* 
 class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
@@ -536,7 +536,71 @@ console.log(autoElettrica.descrizione());
 console.log(autoElettrica.mostraChilometraggio()); 
 
 
-console.log(autoElettrica.verificaChilometraggio()); 
+console.log(autoElettrica.verificaChilometraggio());  */
+
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+
+    
+    _controllaChilometri() {
+        const limite = 100000;
+        if (this.chilometraggio > limite) {
+            return `Attenzione: il chilometraggio ha superato il limite di ${limite} km!`;
+        }
+        return "Il chilometraggio è entro i limiti.";
+    }
+
+    
+    static confrontaChilometraggio(auto1, auto2) {
+        if (auto1.chilometraggio > auto2.chilometraggio) {
+            return `${auto1.marca} ${auto1.modello} ha un chilometraggio maggiore (${auto1.chilometraggio} km) rispetto a ${auto2.marca} ${auto2.modello} (${auto2.chilometraggio} km).`;
+        } else if (auto1.chilometraggio < auto2.chilometraggio) {
+            return `${auto2.marca} ${auto2.modello} ha un chilometraggio maggiore (${auto2.chilometraggio} km) rispetto a ${auto1.marca} ${auto1.modello} (${auto1.chilometraggio} km).`;
+        } else {
+            return `${auto1.marca} ${auto1.modello} e ${auto2.marca} ${auto2.modello} hanno lo stesso chilometraggio (${auto1.chilometraggio} km).`;
+        }
+    }
+}
+
+
+const auto1 = new Automobile("Fiat", "500", 2018, 75000);
+const auto2 = new Automobile("Toyota", "Corolla", 2020, 85000);
+
+
+console.log(auto1.descrizione()); 
+console.log(auto2.descrizione()); 
+
+
+console.log(auto1.mostraChilometraggio()); 
+console.log(auto2.mostraChilometraggio()); 
+
+
+console.log(Automobile.confrontaChilometraggio(auto1, auto2));
+
+
 
 
 
