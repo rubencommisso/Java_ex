@@ -825,7 +825,7 @@ console.log(auto.mostraContatoreChiamate());  */
 
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -889,7 +889,90 @@ console.log(auto.mostraContatore());
 
 console.log(auto.mostraContatoreChiamate());
 
+console.log(`Chilometraggio attuale tramite getter: ${auto.chilometraggioAttuale} km.`); */
+
+
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+        this.#contatoreChiamate = 0;
+        this.#contatoreAggiungiChilometri = 0; 
+    }
+
+    #contatoreChiamate;
+
+    #contatoreAggiungiChilometri;
+
+    #incrementaContatore() {
+        this.#contatoreChiamate++;
+    }
+
+    mostraContatore() {
+        return `Il contatore delle chiamate è: ${this.#contatoreChiamate}`;
+    }
+
+    mostraContatoreChiamate() {
+        return `Il metodo aggiungiChilometri è stato chiamato ${this.#contatoreAggiungiChilometri} volte.`;
+    }
+
+    descrizione() {
+        this.#incrementaContatore(); 
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+    aggiungiChilometri(km) {
+        this.#incrementaContatore(); 
+        this.#contatoreAggiungiChilometri++; 
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    get chilometraggioAttuale() {
+        return this.chilometraggio;
+    }
+
+    set chilometraggioNuovo(nuovoValore) {
+        if (nuovoValore >= this.chilometraggio) {
+            this.chilometraggio = nuovoValore;
+            console.log(`Chilometraggio aggiornato a ${nuovoValore} km.`);
+        } else {
+            console.log("Errore: il nuovo chilometraggio non può essere inferiore al valore attuale.");
+        }
+    }
+
+    mostraChilometraggio() {
+        this.#incrementaContatore(); 
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+}
+
+const auto = new Automobile("Fiat", "500", 2020, 50000);
+
+console.log(auto.descrizione()); 
+console.log(auto.mostraChilometraggio()); 
+auto.aggiungiChilometri(1000); 
+auto.aggiungiChilometri(500);
+console.log(auto.mostraChilometraggio()); 
+
+console.log(auto.mostraContatore());
+
+console.log(auto.mostraContatoreChiamate()); 
+
 console.log(`Chilometraggio attuale tramite getter: ${auto.chilometraggioAttuale} km.`);
+
+
+auto.chilometraggioNuovo = 52000; 
+auto.chilometraggioNuovo = 51000; 
+
+
 
 
 
