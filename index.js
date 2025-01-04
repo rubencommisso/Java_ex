@@ -417,7 +417,7 @@ console.log(auto.saluta());
 console.log(autoElettrica.saluta());  */
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -464,7 +464,81 @@ console.log(auto.descrizione());
 console.log(auto.mostraChilometraggio());
 
 
-console.log(auto.mostraEtà()); 
+console.log(auto.mostraEtà());  */
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+
+   
+    _controllaChilometri() {
+        const limite = 100000;
+        if (this.chilometraggio > limite) {
+            return `Attenzione: il chilometraggio ha superato il limite di ${limite} km!`;
+        }
+        return "Il chilometraggio è entro i limiti.";
+    }
+}
+
+
+class Elettrica extends Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0, autonomia = 0) {
+        super(marca, modello, anno, chilometraggio);
+        this.autonomia = autonomia;
+    }
+
+    descrizione() {
+        return `Questa automobile elettrica è una ${this.marca} ${this.modello} del ${this.anno} con un'autonomia di ${this.autonomia} km.`;
+    }
+
+    ricarica(km) {
+        if (km > 0) {
+            this.autonomia += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di autonomia.");
+        }
+    }
+
+    
+    verificaChilometraggio() {
+        return this._controllaChilometri();
+    }
+}
+
+
+const autoElettrica = new Elettrica("Tesla", "Model 3", 2021, 120000, 400);
+
+
+console.log(autoElettrica.descrizione()); 
+
+
+console.log(autoElettrica.mostraChilometraggio()); 
+
+
+console.log(autoElettrica.verificaChilometraggio()); 
+
+
 
 
 
