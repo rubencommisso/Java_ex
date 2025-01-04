@@ -226,7 +226,7 @@ console.log(squaredNumbers); */
 
 
 
-let students = [
+/* let students = [
     { name: "Luca", grade: 75 },
     { name: "Marco", grade: 45 },
     { name: "Giulia", grade: 85 },
@@ -240,7 +240,21 @@ let firstFailedStudent = students.find(student => student.grade < 60);
 
 console.log("Passed Students:", passedStudents);
 
-console.log("First Failed Student:", firstFailedStudent);
+console.log("First Failed Student:", firstFailedStudent); */
+
+
+let expenses = [100, 200, 50, 400, 75];
+
+let totalExpenses = expenses.reduce((total, expense) => total + expense, 0);
+
+let words = ["banana", "apple", "cherry", "date"];
+
+let sortedWords = words.sort();
+
+console.log("Total Expenses:", totalExpenses);
+
+console.log("Sorted Words:", sortedWords);
+
 
 
                 
