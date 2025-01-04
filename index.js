@@ -203,7 +203,13 @@ for (let property in person) {
 
 /* let keys = Object.keys(student); */
 
-let values = Object.values(student);
+/* let values = Object.values(student); */
 
-console.log(values);
+let entries = Object.entries(student)
+
+console.log(entries);
+
+entries.forEach(([key, value]) => {
+    console.log(`${key}: ${value}`);
+});
                 
