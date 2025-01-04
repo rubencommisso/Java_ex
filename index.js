@@ -257,21 +257,47 @@ console.log("Sorted Words:", sortedWords);
  */
 
 
+
 class Automobile {
     
-    constructor(marca, modello, anno) {
+    constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
+        this.chilometraggio = chilometraggio; 
     }
 
     descrizione() {
         return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
     }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
 }
 
 const auto = new Automobile("Fiat", "500", 2020);
+
 console.log(auto.descrizione()); 
+
+console.log(auto.mostraChilometraggio()); 
+
+auto.aggiungiChilometri(150);
+console.log(auto.mostraChilometraggio()); 
+
+auto.aggiungiChilometri(50);
+console.log(auto.mostraChilometraggio()); 
+
+auto.aggiungiChilometri(-10); 
+
 
 
 
