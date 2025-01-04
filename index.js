@@ -243,7 +243,7 @@ console.log("Passed Students:", passedStudents);
 console.log("First Failed Student:", firstFailedStudent); */
 
 
-let expenses = [100, 200, 50, 400, 75];
+/* let expenses = [100, 200, 50, 400, 75];
 
 let totalExpenses = expenses.reduce((total, expense) => total + expense, 0);
 
@@ -254,6 +254,24 @@ let sortedWords = words.sort();
 console.log("Total Expenses:", totalExpenses);
 
 console.log("Sorted Words:", sortedWords);
+ */
+
+
+class Automobile {
+    
+    constructor(marca, modello, anno) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+    }
+
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+}
+
+const auto = new Automobile("Fiat", "500", 2020);
+console.log(auto.descrizione()); 
 
 
 
