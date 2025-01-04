@@ -361,7 +361,7 @@ autoElettrica.ricarica(50);
 console.log(autoElettrica.descrizione());  */
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -414,7 +414,58 @@ const autoElettrica = new Elettrica("Tesla", "Model 3", 2021, 20000, 400);
 
 console.log(auto.saluta()); 
 
-console.log(autoElettrica.saluta()); 
+console.log(autoElettrica.saluta());  */
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+
+
+    #calcolaEtà() {
+        const annoCorrente = new Date().getFullYear();
+        return annoCorrente - this.anno;
+    }
+
+    
+    mostraEtà() {
+        const età = this.#calcolaEtà();
+        return `L'automobile ha ${età} anni.`;
+    }
+}
+
+
+const auto = new Automobile("Fiat", "500", 2015);
+
+
+console.log(auto.descrizione()); 
+
+
+console.log(auto.mostraChilometraggio());
+
+
+console.log(auto.mostraEtà()); 
+
 
 
 
