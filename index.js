@@ -137,7 +137,7 @@ for (let property in person) {
     console.log(`${property}: ${person[property]}`);
 } */
 
-    function outerFunction(x) {
+/*     function outerFunction(x) {
         
         function innerFunction(y) {
             return x + y; 
@@ -147,4 +147,22 @@ for (let property in person) {
     
     const addWith5 = outerFunction(5); 
     console.log(addWith5(3)); 
-    console.log(addWith5(10));   
+    console.log(addWith5(10));   */ 
+
+    function outerFunction(x, initialValue) {
+
+        let result = initialValue;
+    
+        function innerFunction(y) {
+            result += y; 
+            return result; 
+        }
+    
+        return innerFunction; 
+    }
+    
+    
+    const adder = outerFunction(5, 10);
+    console.log(adder(3)); 
+    console.log(adder(7)); 
+    console.log(adder(-5));
