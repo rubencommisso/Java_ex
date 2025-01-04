@@ -168,7 +168,7 @@ for (let property in person) {
     console.log(adder(-5)); */
 
 
-    function createCounter() {
+   /*  function createCounter() {
 
         let count = 0;
     
@@ -190,4 +190,18 @@ for (let property in person) {
     console.log(counter.increment()); 
     console.log(counter.increment()); 
     console.log(counter.decrement()); 
-    console.log(counter.decrement());
+    console.log(counter.decrement()); */
+
+
+
+ let student = {
+    name: "Luca",
+    age: 16,
+    class: "5th",
+    school: "Liceo Scientifico"
+};
+
+let keys = Object.keys(student);
+
+console.log(keys);
+                
