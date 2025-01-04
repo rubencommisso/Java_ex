@@ -122,17 +122,29 @@ for (let i = 0; i < parole.length; i++) {
     }
 } */
 
-let person = {
+/* let person = {
     name : "Carlo",
     age : 14,
     city : "Torino",
     job : "briklayer",
 };
 
-person.age = 50;
+person.age = 50; */
 
 /* console.log(person.job) */
-
+/* 
 for (let property in person) {
     console.log(`${property}: ${person[property]}`);
-}
+} */
+
+    function outerFunction(x) {
+        
+        function innerFunction(y) {
+            return x + y; 
+        }
+        return innerFunction; 
+    }
+    
+    const addWith5 = outerFunction(5); 
+    console.log(addWith5(3)); 
+    console.log(addWith5(10));   
