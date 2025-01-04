@@ -201,7 +201,9 @@ for (let property in person) {
     school: "Liceo Scientifico"
 };
 
-let keys = Object.keys(student);
+/* let keys = Object.keys(student); */
 
-console.log(keys);
+let values = Object.values(student);
+
+console.log(values);
                 
