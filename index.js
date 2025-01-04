@@ -300,7 +300,7 @@ auto.aggiungiChilometri(-10);  */
 
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -358,7 +358,64 @@ autoElettrica.aggiungiChilometri(150);
 console.log(autoElettrica.mostraChilometraggio()); 
 
 autoElettrica.ricarica(50);
-console.log(autoElettrica.descrizione()); 
+console.log(autoElettrica.descrizione());  */
+
+
+class Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0) {
+        this.marca = marca;
+        this.modello = modello;
+        this.anno = anno;
+        this.chilometraggio = chilometraggio;
+    }
+
+    descrizione() {
+        return `Questa automobile è una ${this.marca} ${this.modello} del ${this.anno}.`;
+    }
+
+    aggiungiChilometri(km) {
+        if (km > 0) {
+            this.chilometraggio += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di chilometri.");
+        }
+    }
+
+    mostraChilometraggio() {
+        return `Il chilometraggio attuale è di ${this.chilometraggio} km.`;
+    }
+}
+
+Automobile.prototype.saluta = function() {
+    return `Ciao! Sono una ${this.marca} ${this.modello}.`;
+};
+
+class Elettrica extends Automobile {
+    constructor(marca, modello, anno, chilometraggio = 0, autonomia = 0) {
+        super(marca, modello, anno, chilometraggio);
+        this.autonomia = autonomia;
+    }
+
+    descrizione() {
+        return `Questa automobile elettrica è una ${this.marca} ${this.modello} del ${this.anno} con un'autonomia di ${this.autonomia} km.`;
+    }
+
+    ricarica(km) {
+        if (km > 0) {
+            this.autonomia += km;
+        } else {
+            console.log("Non è possibile aggiungere un valore negativo di autonomia.");
+        }
+    }
+}
+
+const auto = new Automobile("Fiat", "500", 2020);
+const autoElettrica = new Elettrica("Tesla", "Model 3", 2021, 20000, 400);
+
+console.log(auto.saluta()); 
+
+console.log(autoElettrica.saluta()); 
+
 
 
 
