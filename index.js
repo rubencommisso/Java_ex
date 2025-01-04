@@ -194,22 +194,34 @@ for (let property in person) {
 
 
 
- let student = {
+/*  let student = {
     name: "Luca",
     age: 16,
     class: "5th",
     school: "Liceo Scientifico"
-};
+}; */
 
 /* let keys = Object.keys(student); */
 
 /* let values = Object.values(student); */
 
-let entries = Object.entries(student)
+/* let entries = Object.entries(student)
 
 console.log(entries);
 
 entries.forEach(([key, value]) => {
     console.log(`${key}: ${value}`);
+}); */
+
+
+let numbers = [1, 2, 3, 4, 5];
+
+numbers.forEach(number => {
+    console.log(number * 2);
 });
+
+let squaredNumbers = numbers.map(number => number ** 2);
+
+console.log(squaredNumbers);
+
                 
