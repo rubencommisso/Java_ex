@@ -1187,7 +1187,7 @@ console.log(Automobile.verificaIstanza(auto, Camion));     */
 
 const arrayy = [1,2,3,4,5];
 
-let [uno,due] = arrayy;
+let [uno,,due] = arrayy;
 
 console.log(uno)
 console.log(due)
