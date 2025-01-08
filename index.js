@@ -1108,7 +1108,7 @@ mioCamion.scaricaCarico();  */
 
 
 
-class Automobile {
+/* class Automobile {
     constructor(marca, modello, anno, chilometraggio = 0) {
         this.marca = marca;
         this.modello = modello;
@@ -1183,7 +1183,14 @@ console.log(camion instanceof Automobile);
 console.log(Automobile.verificaIstanza(auto, Automobile)); 
 console.log(Automobile.verificaIstanza(camion, Camion));   
 console.log(Automobile.verificaIstanza(camion, Automobile)); 
-console.log(Automobile.verificaIstanza(auto, Camion));    
+console.log(Automobile.verificaIstanza(auto, Camion));     */
+
+const arrayy = [1,2,3,4,5];
+
+let [uno,due] = arrayy;
+
+console.log(uno)
+console.log(due)
 
 
 
