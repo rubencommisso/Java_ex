@@ -1185,12 +1185,12 @@ console.log(Automobile.verificaIstanza(camion, Camion));
 console.log(Automobile.verificaIstanza(camion, Automobile)); 
 console.log(Automobile.verificaIstanza(auto, Camion));     */
 
-const arrayy = [1,2,3,4,5];
+const arrayy = [1,2,3,4];
 
-let [uno,,due] = arrayy;
+let [uno = "number", due = "number", tre = "number",quattro = "number",cinque = "number"] = arrayy;
 
-console.log(uno)
-console.log(due)
+console.log(cinque)
+
 
 
 
