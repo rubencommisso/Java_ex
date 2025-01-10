@@ -1185,11 +1185,18 @@ console.log(Automobile.verificaIstanza(camion, Camion));
 console.log(Automobile.verificaIstanza(camion, Automobile)); 
 console.log(Automobile.verificaIstanza(auto, Camion));     */
 
-const arrayy = [1,2,3,4];
+/* const arrayy = [1,2,3,4];
 
 let [uno = "number", due = "number", tre = "number",quattro = "number",cinque = "number"] = arrayy;
 
-console.log(cinque)
+console.log(cinque) */
+
+let Carlo = ["Carlo Conti", "Conduttore"]
+
+let [nome, professione] = Carlo
+
+console.log(nome)
+console.log(professione)
 
 
 
