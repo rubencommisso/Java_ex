@@ -1193,10 +1193,10 @@ console.log(cinque) */
 
 let Carlo = ["Carlo Conti", "Conduttore"]
 
-let [nome, professione] = Carlo
+let [identità, lavoro] = Carlo
 
-console.log(nome)
-console.log(professione)
+console.log(identità)
+console.log(lavoro)
 
 
 
