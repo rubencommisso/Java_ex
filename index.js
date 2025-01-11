@@ -1191,12 +1191,19 @@ let [uno = "number", due = "number", tre = "number",quattro = "number",cinque = 
 
 console.log(cinque) */
 
-let Carlo = ["Carlo Conti", "Conduttore"]
+const Carlo = { 
+    nome:"Carlo Conti", 
+    professione: "Conduttore",
+    
+};
 
-let [identità, lavoro] = Carlo
+let {nome, professione, età = "55", residenza = "Piemonte"} = Carlo;
 
-console.log(identità)
-console.log(lavoro)
+console.log(`Nome: ${nome}`);         
+console.log(`Età: ${età}`);           
+console.log(`residenza: ${residenza}`);       
+console.log(`Professione: ${professione}`); 
+
 
 
 
