@@ -1191,7 +1191,7 @@ let [uno = "number", due = "number", tre = "number",quattro = "number",cinque = 
 
 console.log(cinque) */
 
-const Carlo = { 
+/* const Carlo = { 
     nome:"Carlo Conti", 
     professione: "Conduttore",
     
@@ -1202,7 +1202,16 @@ let {nome, professione, età = "55", residenza = "Piemonte"} = Carlo;
 console.log(`Nome: ${nome}`);         
 console.log(`Età: ${età}`);           
 console.log(`residenza: ${residenza}`);       
-console.log(`Professione: ${professione}`); 
+console.log(`Professione: ${professione}`);  */
+
+
+let numeriOriginali = [1, 2, 3, 4, 5];
+
+let copiaNumeri = [...numeriOriginali];
+
+console.log("Array originale:", numeriOriginali); 
+console.log("Copia dell'array:", copiaNumeri);    
+
 
 
 
