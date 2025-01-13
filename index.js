@@ -1205,12 +1205,21 @@ console.log(`residenza: ${residenza}`);
 console.log(`Professione: ${professione}`);  */
 
 
-let numeriOriginali = [1, 2, 3, 4, 5];
+/* let numeriOriginali = [1, 2, 3, 4, 5];
 
 let copiaNumeri = [...numeriOriginali];
 
 console.log("Array originale:", numeriOriginali); 
-console.log("Copia dell'array:", copiaNumeri);    
+console.log("Copia dell'array:", copiaNumeri);     */
+
+let giacomo = [1,2,3,4,5,6];
+
+let gigi = [7,8,9,10,11];
+
+let giacomogigi = [...giacomo,...gigi]
+
+console.log(giacomogigi)
+
 
 
 
