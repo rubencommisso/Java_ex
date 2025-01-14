@@ -1236,13 +1236,22 @@ const persona = {
   console.log("Oggetto modificato:", personaConProfessione); */
 
   
-  const numbers = [1, 3, 5, 7, 10, 200, 35];
+/*   const numbers = [1, 3, 5, 7, 10, 200, 35];
   
   function addNumbers(...numeri) {
     return numeri.reduce((acc, numero) => acc + numero, 0);
   }
   
-  console.log(addNumbers(...numbers));
+  console.log(addNumbers(...numbers)); */
+
+  const numbers = [1,2,3,4,5];
+
+  let [a,b,...restOfNumbers] = numbers 
+
+  console.log(a);
+  console.log(b);
+  console.log(restOfNumbers);
+
             
   
 
