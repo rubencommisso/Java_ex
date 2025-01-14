@@ -1220,7 +1220,7 @@ let giacomogigi = [...giacomo,...gigi]
 
 console.log(giacomogigi) */
 
-
+/* 
 const persona = {
     nome: "Marco",
     età: 30,
@@ -1233,7 +1233,17 @@ const persona = {
   };
 
   console.log("Oggetto originale:", persona);
-  console.log("Oggetto modificato:", personaConProfessione);
+  console.log("Oggetto modificato:", personaConProfessione); */
+
+  
+  const numbers = [1, 3, 5, 7, 10, 200, 35];
+  
+  function addNumbers(...numeri) {
+    return numeri.reduce((acc, numero) => acc + numero, 0);
+  }
+  
+  console.log(addNumbers(...numbers));
+            
   
 
 
