@@ -1244,13 +1244,31 @@ const persona = {
   
   console.log(addNumbers(...numbers)); */
 
-  const numbers = [1,2,3,4,5];
+/*   const numbers = [1,2,3,4,5];
 
   let [a,b,...restOfNumbers] = numbers 
 
   console.log(a);
   console.log(b);
-  console.log(restOfNumbers);
+  console.log(restOfNumbers); */
+
+  const persona = {
+    nome: "Marco",
+    età: 30,
+    città: "Roma",
+    via: "porta Pia"
+  };
+
+  let = { nome, età, ...città} = persona
+
+  const residenza = {
+    stato: "Italia",
+    ...città
+  }
+
+console.log(nome)
+console.log(età)
+console.log(residenza)
 
             
   
