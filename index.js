@@ -1270,14 +1270,22 @@ console.log(nome)
 console.log(età)
 console.log(residenza) */
 
-const obj = {
+/* const obj = {
     nome: "Mario",
     cognome: "pollo",
 };
 
 let persona = JSON.stringify(obj)
 
+console.log(persona) */
+
+let string = '{"nome":"Mario","cognome":"pollo"}';
+
+let persona = JSON.parse(string);
+
 console.log(persona)
+
+
             
   
 
