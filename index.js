@@ -1279,11 +1279,33 @@ let persona = JSON.stringify(obj)
 
 console.log(persona) */
 
-let string = '{"nome":"Mario","cognome":"pollo"}';
+/* let string = '{"nome":"Mario","cognome":"pollo"}';
 
 let persona = JSON.parse(string);
 
-console.log(persona)
+console.log(persona) */
+
+
+let personeJSON = `
+[
+  { "nome": "Mario", "cognome": "Rossi", "età": 30 },
+  { "nome": "Luca", "cognome": "Bianchi", "età": 25 },
+  { "nome": "Anna", "cognome": "Verdi", "età": 28 }
+]
+`;
+
+
+let personeArray = JSON.parse(personeJSON);
+
+
+personeArray.push({ nome: "Giulia", cognome: "Neri", età: 32 });
+
+
+let personeJSONAggiornato = JSON.stringify(personeArray, null, 2);
+
+
+console.log(personeJSONAggiornato);
+
 
 
             
