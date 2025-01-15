@@ -1251,7 +1251,7 @@ const persona = {
   console.log(a);
   console.log(b);
   console.log(restOfNumbers); */
-
+/* 
   const persona = {
     nome: "Marco",
     età: 30,
@@ -1268,8 +1268,16 @@ const persona = {
 
 console.log(nome)
 console.log(età)
-console.log(residenza)
+console.log(residenza) */
 
+const obj = {
+    nome: "Mario",
+    cognome: "pollo",
+};
+
+let persona = JSON.stringify(obj)
+
+console.log(persona)
             
   
 
