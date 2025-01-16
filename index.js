@@ -1348,15 +1348,27 @@ function formattaPersona(persona) {
   const descrizione = formattaPersona(personaEsempio);
   console.log(descrizione);
    */
-
+/* 
   console.log(3)
   console.log("ciao")
   console.log([1,2,3,4])
-  console.log({nome: "Mario", cognome: "Pollo"})
+  console.log({nome: "Mario", cognome: "Pollo"}) */
 
+  const input = 24
 
+  const error = () => {
 
+    if (input < 18) {console.error("Errore: il valore è inferiore a 18");
 
+    } else {}
+
+    if (isNaN(input)) {console.warn("Puoi inserire solo numeri")
+        
+    } else {}
+
+    };
+
+  error();
 
 
 
