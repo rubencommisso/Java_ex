@@ -1392,8 +1392,19 @@ function saluto() {
 
 setTimeout(saluto, 3000);
 
+const saluti = setInterval (() => {
+    
+    console.log("ciao")
 
+},2000);
 
+setTimeout(() => {
+    
+    clearInterval(saluti);
+
+    console.log("fine")
+
+}, 15000);
 
 
 
