@@ -1392,7 +1392,7 @@ console.groupEnd()
 
 setTimeout(saluto, 3000); */
 
-const saluti = setInterval (() => {
+/* const saluti = setInterval (() => {
     
     console.log("ciao")
 
@@ -1404,7 +1404,26 @@ setTimeout(() => {
 
     console.log("fine")
 
-}, 5000);
+}, 5000); */
+
+try {
+
+   function divide(a, b) {
+    if (b === 0) {
+        throw new Error;
+    }
+    return a/b;
+   }
+
+   console.log(divide(9, 0));
+  
+  } catch (err) {
+  
+    console.log("Si è verificato un errore!");
+  
+  }
+
+  
 
 
 
