@@ -1286,7 +1286,7 @@ let persona = JSON.parse(string);
 console.log(persona) */
 
 
-let personeJSON = `
+/* let personeJSON = `
 [
   { "nome": "Mario", "cognome": "Rossi", "età": 30 },
   { "nome": "Luca", "cognome": "Bianchi", "età": 25 },
@@ -1304,7 +1304,18 @@ personeArray.push({ nome: "Giulia", cognome: "Neri", età: 32 });
 let personeJSONAggiornato = JSON.stringify(personeArray, null, 2);
 
 
-console.log(personeJSONAggiornato);
+console.log(personeJSONAggiornato); */
+
+const nome = "Mario";
+
+const cognome = "Pollo";
+
+const messaggio = `Ciao mi chiamo ${nome}, il mio cognome è ${cognome}`;
+
+console.log(messaggio);
+
+
+
 
 
 
