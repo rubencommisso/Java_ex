@@ -1306,13 +1306,28 @@ let personeJSONAggiornato = JSON.stringify(personeArray, null, 2);
 
 console.log(personeJSONAggiornato); */
 
-const nome = "Mario";
+/* const nome = "Mario";
 
 const cognome = "Pollo";
 
 const messaggio = `Ciao mi chiamo ${nome}, il mio cognome è ${cognome}`;
 
-console.log(messaggio);
+console.log(messaggio); */
+
+const nome = "Giulia";
+const cognome = "Rossi";
+const età = 27;
+const città = "Milano";
+
+const descrizionePersona = `
+Nome: ${nome}
+Cognome: ${cognome}
+Età: ${età} anni
+Città: ${città}
+`;
+
+console.log(descrizionePersona);
+
 
 
 
