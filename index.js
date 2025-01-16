@@ -1354,7 +1354,7 @@ function formattaPersona(persona) {
   console.log([1,2,3,4])
   console.log({nome: "Mario", cognome: "Pollo"}) */
 
-  const input = 24
+/*   const input = 24
 
   const error = () => {
 
@@ -1368,10 +1368,22 @@ function formattaPersona(persona) {
 
     };
 
-  error();
+  error(); */
+
+  const utenti = [
+    { nome: "Luca", età: 30, città: "Roma" },
+    { nome: "Giulia", età: 25, città: "Milano" },
+    { nome: "Marco", età: 28, città: "Napoli" }
+  ];
+  
+  console.table(utenti);
 
 
-
+console.group("Dettagli utente")
+console.log("nome: Luca"),
+console.log("età: 25"),
+console.log ("città: Roma")
+console.groupEnd()
             
   
 
