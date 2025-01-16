@@ -1386,17 +1386,17 @@ console.log ("città: Roma")
 console.groupEnd()
              */
 
-function saluto() {
+/* function saluto() {
     console.log("ciao")
 }
 
-setTimeout(saluto, 3000);
+setTimeout(saluto, 3000); */
 
 const saluti = setInterval (() => {
     
     console.log("ciao")
 
-},2000);
+},1000);
 
 setTimeout(() => {
     
@@ -1404,7 +1404,7 @@ setTimeout(() => {
 
     console.log("fine")
 
-}, 15000);
+}, 5000);
 
 
 
