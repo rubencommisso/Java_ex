@@ -1328,7 +1328,7 @@ Città: ${città}
 
 console.log(descrizionePersona); */
 
-
+/* 
 function formattaPersona(persona) {
     return `
   Nome: ${persona.nome}
@@ -1347,7 +1347,12 @@ function formattaPersona(persona) {
   
   const descrizione = formattaPersona(personaEsempio);
   console.log(descrizione);
-  
+   */
+
+  console.log(3)
+  console.log("ciao")
+  console.log([1,2,3,4])
+  console.log({nome: "Mario", cognome: "Pollo"})
 
 
 
