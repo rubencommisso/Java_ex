@@ -1314,7 +1314,7 @@ const messaggio = `Ciao mi chiamo ${nome}, il mio cognome è ${cognome}`;
 
 console.log(messaggio); */
 
-const nome = "Giulia";
+/* const nome = "Giulia";
 const cognome = "Rossi";
 const età = 27;
 const città = "Milano";
@@ -1326,7 +1326,28 @@ Età: ${età} anni
 Città: ${città}
 `;
 
-console.log(descrizionePersona);
+console.log(descrizionePersona); */
+
+
+function formattaPersona(persona) {
+    return `
+  Nome: ${persona.nome}
+  Cognome: ${persona.cognome}
+  Età: ${persona.età} anni
+  Città: ${persona.città}
+  `;
+  }
+
+  const personaEsempio = {
+    nome: "Luca",
+    cognome: "Bianchi",
+    età: 35,
+    città: "Roma"
+  };
+  
+  const descrizione = formattaPersona(personaEsempio);
+  console.log(descrizione);
+  
 
 
 
