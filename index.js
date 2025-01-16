@@ -1370,7 +1370,7 @@ function formattaPersona(persona) {
 
   error(); */
 
-  const utenti = [
+/*   const utenti = [
     { nome: "Luca", età: 30, città: "Roma" },
     { nome: "Giulia", età: 25, città: "Milano" },
     { nome: "Marco", età: 28, città: "Napoli" }
@@ -1384,8 +1384,13 @@ console.log("nome: Luca"),
 console.log("età: 25"),
 console.log ("città: Roma")
 console.groupEnd()
-            
-  
+             */
+
+function saluto() {
+    console.log("ciao")
+}
+
+setTimeout(saluto, 3000);
 
 
 
