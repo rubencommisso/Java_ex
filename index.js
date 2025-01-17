@@ -1474,7 +1474,7 @@ setTimeout(() => {
      
 
 
-function persona (nome, cognome, callback) {
+/* function persona (nome, cognome, callback) {
     let identità = nome + cognome;
     callback(identità);
 }    
@@ -1483,7 +1483,34 @@ function nomeCompleto(identità) {
     console.log("il nome completo è:", identità);
 }
 
-persona("Marco ", "Polo", nomeCompleto);
+persona("Marco ", "Polo", nomeCompleto); */
+
+
+
+function primaOperazione(dato, callback) {
+    console.log("Inizio della prima operazione...");
+    setTimeout(() => {
+      let risultato = dato * 2;  
+      console.log("Prima operazione completata:", risultato);
+      callback(risultato);      
+    }, 1000);  
+  }
+  
+  function secondaOperazione(dato, callback) {
+    console.log("Inizio della seconda operazione...");
+    setTimeout(() => {
+      let risultato = dato + 10;  
+      console.log("Seconda operazione completata:", risultato);
+      callback(risultato);        
+    }, 1000);
+  }
+
+  primaOperazione(5, function(risultatoPrima) {
+    secondaOperazione(risultatoPrima, function(risultatoFinale) {
+      console.log("Operazioni completate. Risultato finale:", risultatoFinale);
+    });
+  });
+  
 
 
 
