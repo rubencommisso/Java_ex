@@ -1461,7 +1461,7 @@ setTimeout(() => {
 } finally {
     console.log("operazione riuscita");
 } */
-
+/* 
     function calcola(a, b, operazione) {
         return operazione(a, b);
       }
@@ -1470,8 +1470,20 @@ setTimeout(() => {
         return x + y;
       }
             
-      console.log(calcola(5, 3, somma));
+      console.log(calcola(5, 3, somma)); */
      
+
+
+function persona (nome, cognome, callback) {
+    let identità = nome + cognome;
+    callback(identità);
+}    
+
+function nomeCompleto(identità) {
+    console.log("il nome completo è:", identità);
+}
+
+persona("Marco ", "Polo", nomeCompleto);
 
 
 
