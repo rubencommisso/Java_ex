@@ -1423,7 +1423,7 @@ setTimeout(() => {
   
   } */
 
-    try {
+ /*    try {
         function convertiInMaiuscolo(testo) {
           if (typeof testo !== "string") {
             throw new TypeError("Errore di tipo: è richiesta una stringa.");
@@ -1447,10 +1447,20 @@ setTimeout(() => {
         } else {
           console.error("Errore generico:", err.message);
         }
-      }
+      } */
       
+try {
+    console.log("inizio operazione");
 
-  
+    let risultato = 10/ due;
+    console.log("risultato", risultato);
+
+} catch (err) {
+    console.error("si è verificato un errore", err.message);
+
+} finally {
+    console.log("operazione riuscita");
+}
 
 
 
