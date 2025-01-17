@@ -1449,7 +1449,7 @@ setTimeout(() => {
         }
       } */
       
-try {
+/* try {
     console.log("inizio operazione");
 
     let risultato = 10/ due;
@@ -1460,9 +1460,18 @@ try {
 
 } finally {
     console.log("operazione riuscita");
-}
+} */
 
-
+    function calcola(a, b, operazione) {
+        return operazione(a, b);
+      }
+      
+      function somma(x, y) {
+        return x + y;
+      }
+            
+      console.log(calcola(5, 3, somma));
+     
 
 
 
