@@ -1406,7 +1406,7 @@ setTimeout(() => {
 
 }, 5000); */
 
-try {
+/* try {
 
    function divide(a, b) {
     if (b === 0) {
@@ -1421,7 +1421,34 @@ try {
   
     console.log("Si è verificato un errore!");
   
-  }
+  } */
+
+    try {
+        function convertiInMaiuscolo(testo) {
+          if (typeof testo !== "string") {
+            throw new TypeError("Errore di tipo: è richiesta una stringa.");
+          }
+          
+          if (testo === "") {
+            throw new Error("Errore: la stringa non può essere vuota.");
+          }
+      
+          return testo.toUpperCase();
+        }
+      
+        console.log(convertiInMaiuscolo("ciao"));   
+        console.log(convertiInMaiuscolo(123));      
+        console.log(convertiInMaiuscolo(""));      
+      
+      } catch (err) {
+       
+        if (err instanceof TypeError) {
+          console.error("TypeError rilevato:", err.message);
+        } else {
+          console.error("Errore generico:", err.message);
+        }
+      }
+      
 
   
 
