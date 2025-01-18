@@ -1513,13 +1513,23 @@ persona("Marco ", "Polo", nomeCompleto);
   }); */
 
   let promise = new Promise(function(resolve,reject){
-    setTimeout(()=> resolve(1+2), 2000);
+    const random = Math.floor(Math.random() * 10) + 1;
+    const fail = random < 3;
+
+ setTimeout(()=> {
+        
+    if (fail) {reject("errore");
+
+        } else { 
+            resolve(random + 3);
+        
+        }
+        }, 2000);
   });
 
-  promise.then(
-    result => console.log("Risultato:",result),
-    error => console.log("errore:",error)
-  );
+  promise
+  .then(result => console.log("Risultato:",result),)
+  .catch(error => console.log("errore:",error));
   
 
 
