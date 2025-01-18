@@ -1553,7 +1553,7 @@ persona("Marco ", "Polo", nomeCompleto);
     return new Promise((resolve) => {
       setTimeout(() => {
         console.log("Operazione 1 completata");
-        resolve(10);
+        resolve(2);
       }, 1000);
     });
   }
@@ -1562,7 +1562,7 @@ persona("Marco ", "Polo", nomeCompleto);
     return new Promise((resolve) => {
       setTimeout(() => {
         console.log("Operazione 2 completata");
-        resolve(valore * 2);
+        resolve(valore * 3);
       }, 1000);
     });
   }
@@ -1570,11 +1570,11 @@ persona("Marco ", "Polo", nomeCompleto);
   function operazione3(valore) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (valore > 15) {
+        if (valore % 2 === 0) {
           console.log("Operazione 3 completata");
           resolve(valore + 3);
         } else {
-          reject("Valore troppo basso");
+            reject("Valore non è pari");
         }
       }, 1000);
     });
