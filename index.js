@@ -1532,7 +1532,7 @@ persona("Marco ", "Polo", nomeCompleto);
   .catch(error => console.log("errore:",error)); */
   
 
-  function dividi(a, b) {
+/*   function dividi(a, b) {
     try {
       if (b === 0) {
         throw new Error("Non puoi dividere per zero!");
@@ -1546,10 +1546,47 @@ persona("Marco ", "Polo", nomeCompleto);
   }
   
   dividi(10, 2);  
-  dividi(10, 0); 
+  dividi(10, 0);  */
   
 
-
+  function operazione1() {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log("Operazione 1 completata");
+        resolve(10);
+      }, 1000);
+    });
+  }
+  
+  function operazione2(valore) {
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        console.log("Operazione 2 completata");
+        resolve(valore * 2);
+      }, 1000);
+    });
+  }
+  
+  function operazione3(valore) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        if (valore > 15) {
+          console.log("Operazione 3 completata");
+          resolve(valore + 3);
+        } else {
+          reject("Valore troppo basso");
+        }
+      }, 1000);
+    });
+  }
+  
+  operazione1()
+    .then(risultato1 => operazione2(risultato1))  
+    .then(risultato2 => operazione3(risultato2)) 
+    .then(finale => console.log("Risultato finale:", finale))
+    .catch(errore => console.error("Errore:", errore))
+    .finally(() => console.log("Processo completato"));
+  
 
 
 
