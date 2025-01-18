@@ -1512,7 +1512,7 @@ persona("Marco ", "Polo", nomeCompleto);
     });
   }); */
 
-  let promise = new Promise(function(resolve,reject){
+/*   let promise = new Promise(function(resolve,reject){
     const random = Math.floor(Math.random() * 10) + 1;
     const fail = random < 3;
 
@@ -1529,10 +1529,25 @@ persona("Marco ", "Polo", nomeCompleto);
 
   promise
   .then(result => console.log("Risultato:",result),)
-  .catch(error => console.log("errore:",error));
+  .catch(error => console.log("errore:",error)); */
   
 
-
+  function dividi(a, b) {
+    try {
+      if (b === 0) {
+        throw new Error("Non puoi dividere per zero!");
+      }
+      console.log("Risultato:", a / b);
+    } catch (errore) {
+      console.error("Errore:", errore.message);
+    } finally {
+      console.log("Operazione completata.");
+    }
+  }
+  
+  dividi(10, 2);  
+  dividi(10, 0); 
+  
 
 
 
