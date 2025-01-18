@@ -1610,20 +1610,32 @@ let risultatoOp2 = new Promise(function(myResolve, myReject) {
 }, 3000);
 });
 
-Promise.race([
+let risultatoOp3 = new Promise(function(myResolve, myReject) {
+    let ok = false
+
+    setTimeout (() => {if (ok) {
+        myResolve("caricamento avvenuto con successo ancora");
+    } else {
+        myReject("fallito il caricamento");
+    }
+}, 5000);
+});
+
+Promise.allSettled([
 risultatoOp,
-risultatoOp2,])
+risultatoOp2,
+risultatoOp3,])
 .then(
     function (risultato) {
         console.log(risultato)
     }
 )
 
-.catch (
+/* .catch (
     function(errore) {
         console.error(errore)
     }
-)  
+)   */
 
 
   
