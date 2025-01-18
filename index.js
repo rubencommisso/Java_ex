@@ -1588,7 +1588,7 @@ persona("Marco ", "Polo", nomeCompleto);
     .finally(() => console.log("Processo completato")); */
 
 
- let risultatoOp = new Promise(function(myResolve, myReject) {
+ /* let risultatoOp = new Promise(function(myResolve, myReject) {
     let ok = true
 
     setTimeout (() => {if (ok) {
@@ -1630,7 +1630,7 @@ risultatoOp3,])
         console.log(risultato)
     }
 )
-
+ */
 /* .catch (
     function(errore) {
         console.error(errore)
@@ -1638,7 +1638,25 @@ risultatoOp3,])
 )   */
 
 
-  
+    function caricaDati() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve("Dati caricati!");
+            }, 2000);
+        });
+    }
+    
+    async function avviaCaricamento() {
+        console.log("Inizio caricamento...");
+        
+        let dati = await caricaDati();  // ⏳ Aspetta 1.5 secondi
+        
+        console.log(dati);  // Output: "Dati caricati!"
+        console.log("Caricamento completato.");
+    }
+    
+    avviaCaricamento();
+     
 
 
 
