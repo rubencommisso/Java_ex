@@ -1549,7 +1549,7 @@ persona("Marco ", "Polo", nomeCompleto);
   dividi(10, 0);  */
   
 
-/*   function operazione1() {
+  function operazione1() {
     return new Promise((resolve) => {
       setTimeout(() => {
         console.log("Operazione 1 completata");
@@ -1585,10 +1585,10 @@ persona("Marco ", "Polo", nomeCompleto);
     .then(risultato2 => operazione3(risultato2)) 
     .then(finale => console.log("Risultato finale:", finale))
     .catch(errore => console.error("Errore:", errore))
-    .finally(() => console.log("Processo completato")); */
+    .finally(() => console.log("Processo completato"));
 
 
-let risultatoOp = new Promise(function(myResolve, myReject) {
+/* let risultatoOp = new Promise(function(myResolve, myReject) {
     let ok = true
 
     if (ok) {
@@ -1609,7 +1609,7 @@ risultatoOp
     function(errore) {
         console.error(errore)
     }
-)
+) */
 
 
   
