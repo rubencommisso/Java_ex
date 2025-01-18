@@ -1483,11 +1483,12 @@ function nomeCompleto(identità) {
     console.log("il nome completo è:", identità);
 }
 
-persona("Marco ", "Polo", nomeCompleto); */
+persona("Marco ", "Polo", nomeCompleto);
+ */
 
 
 
-function primaOperazione(dato, callback) {
+/* function primaOperazione(dato, callback) {
     console.log("Inizio della prima operazione...");
     setTimeout(() => {
       let risultato = dato * 2;  
@@ -1509,7 +1510,16 @@ function primaOperazione(dato, callback) {
     secondaOperazione(risultatoPrima, function(risultatoFinale) {
       console.log("Operazioni completate. Risultato finale:", risultatoFinale);
     });
+  }); */
+
+  let promise = new Promise(function(resolve,reject){
+    setTimeout(()=> resolve(1+2), 2000);
   });
+
+  promise.then(
+    result => console.log("Risultato:",result),
+    error => console.log("errore:",error)
+  );
   
 
 
