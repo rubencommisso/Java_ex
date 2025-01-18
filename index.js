@@ -1570,11 +1570,11 @@ persona("Marco ", "Polo", nomeCompleto);
   function operazione3(valore) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (valore % 2 === 0) {
+        if (valore <= Math.random() * 10 + 1) {
           console.log("Operazione 3 completata");
           resolve(valore + 3);
         } else {
-            reject("Valore non è pari");
+            reject("errore");
         }
       }, 1000);
     });
