@@ -1638,7 +1638,7 @@ risultatoOp3,])
 )   */
 
 
-    function caricaDati() {
+    /* function caricaDati() {
         return new Promise(resolve => {
             setTimeout(() => {
                 resolve("Dati caricati!");
@@ -1655,9 +1655,32 @@ risultatoOp3,])
         console.log("Caricamento completato.");
     }
     
-    avviaCaricamento();
+    avviaCaricamento(); */
      
 
+function operazioneAsincrona(condizione) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (condizione) {
+                resolve("Operazione completata con successo!");
+            } else {
+                reject("Errore: Operazione fallita.");
+            }
+        }, 1000);
+    });
+}
+
+async function eseguiOperazione(condizione) {
+    try {
+        const risultato = await operazioneAsincrona(condizione);
+        console.log(risultato);
+    } catch (errore) {
+        console.error(errore);
+    }
+}
+
+eseguiOperazione(true); 
+eseguiOperazione(false); 
 
 
 
