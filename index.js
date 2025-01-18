@@ -1610,7 +1610,7 @@ let risultatoOp2 = new Promise(function(myResolve, myReject) {
 }, 3000);
 });
 
-Promise.all([
+Promise.race([
 risultatoOp,
 risultatoOp2,])
 .then(
@@ -1619,11 +1619,11 @@ risultatoOp2,])
     }
 )
 
-/* .catch (
+.catch (
     function(errore) {
         console.error(errore)
     }
-)  */
+)  
 
 
   
