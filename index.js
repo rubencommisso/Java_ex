@@ -1658,7 +1658,7 @@ risultatoOp3,])
     avviaCaricamento(); */
      
 
-function operazioneAsincrona(condizione) {
+/* function operazioneAsincrona(condizione) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (condizione) {
@@ -1680,10 +1680,40 @@ async function eseguiOperazione(condizione) {
 }
 
 eseguiOperazione(true); 
-eseguiOperazione(false); 
+eseguiOperazione(false);  */
+
+async function f() {
+
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve(console.log("fatto!")), 1000)
+    });
+  
+    /* let result = await promise; */
+  
+  }
+  
+  f();
+
+  async function f2() {
+
+    let promise2 = new Promise((resolve, reject) => {
+      setTimeout(() => resolve(console.log("fatto2!")), 3000)
+    });
+  
+   /*  let result = await promise2;  */
+  
+  }
+  
+  f2();
 
 
+  async function f3() {
 
+    await f();  
+    await f2(); 
+}
+
+f3();
 
 
 
