@@ -1682,13 +1682,11 @@ async function eseguiOperazione(condizione) {
 eseguiOperazione(true); 
 eseguiOperazione(false);  */
 
-async function f() {
+/* async function f() {
 
     let promise = new Promise((resolve, reject) => {
       setTimeout(() => resolve(console.log("fatto!")), 1000)
     });
-  
-    /* let result = await promise; */
   
   }
   
@@ -1699,8 +1697,6 @@ async function f() {
     let promise2 = new Promise((resolve, reject) => {
       setTimeout(() => resolve(console.log("fatto2!")), 3000)
     });
-  
-   /*  let result = await promise2;  */
   
   }
   
@@ -1713,7 +1709,12 @@ async function f() {
     await f2(); 
 }
 
-f3();
+f3(); */
+
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+    .then(response => response.json()) // Converte la risposta in JSON
+    .then(data => console.log(data))   // Visualizza i dati
+    .catch(error => console.error('Errore:', error));
 
 
 
