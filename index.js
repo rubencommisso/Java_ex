@@ -1711,10 +1711,26 @@ eseguiOperazione(false);  */
 
 f3(); */
 
-fetch('https://jsonplaceholder.typicode.com/posts/1')
+/* fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then(response => response.json()) // Converte la risposta in JSON
     .then(data => console.log(data))   // Visualizza i dati
-    .catch(error => console.error('Errore:', error));
+    .catch(error => console.error('Errore:', error)); */
+
+    fetch('https://jsonplaceholder.typicode.com/users', {
+        method: 'POST', 
+        headers: {
+            'Content-Type': 'application/json', 
+        },
+        body: JSON.stringify({
+            name: 'Mario Rossi',
+            email: 'mario.rossi@example.com',
+            username: 'mrossi'
+        }) 
+    })
+        .then(response => response.json()) 
+        .then(data => console.log('Risposta del server:', data)) 
+        .catch(error => console.error('Errore:', error));
+    
 
 
 
