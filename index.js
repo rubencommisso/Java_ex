@@ -1716,7 +1716,7 @@ f3(); */
     .then(data => console.log(data))   // Visualizza i dati
     .catch(error => console.error('Errore:', error)); */
 
-    fetch('https://jsonplaceholder.typicode.com/users', {
+/*     fetch('https://jsonplaceholder.typicode.com/users', {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json', 
@@ -1729,7 +1729,25 @@ f3(); */
     })
         .then(response => response.json()) 
         .then(data => console.log('Risposta del server:', data)) 
-        .catch(error => console.error('Errore:', error));
+        .catch(error => console.error('Errore:', error)); */
+    
+
+
+async function getRequest() {
+
+    const url = "https://jsonplaceholder.typicode.com/posts/1"
+    
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
+        console.log("dati ricevuti", data)
+
+    } catch (error) {
+    console.error("errore")
+}
+}
+
+getRequest();
     
 
 
