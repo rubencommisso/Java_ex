@@ -1733,7 +1733,7 @@ f3(); */
     
 
 
-        const proxyUrl = 'https://api.allorigins.win/get?url=';
+     /*    const proxyUrl = 'https://api.allorigins.win/get?url=';
         const targetUrl = 'https://jsonplaceholder.typicode.com/posts/1';
         
         async function getRequest() {
@@ -1746,8 +1746,12 @@ f3(); */
             }
         }
         
-        getRequest();
-        
+        getRequest(); */
+
+        fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => console.log(users))
+        .catch(error => console.error('Errore:', error));
         
     
 
