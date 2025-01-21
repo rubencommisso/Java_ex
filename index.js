@@ -1735,7 +1735,7 @@ f3(); */
 
 async function getRequest() {
 
-    const url = "https://jsonplaceholder.typicode.com/posts/1"
+    const url = 'https://example.com/api/data'
     
     try{
         const response = await fetch(url);
