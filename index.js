@@ -1733,21 +1733,22 @@ f3(); */
     
 
 
-async function getRequest() {
-
-    const url = 'https://example.com/api/data'
-    
-    try{
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log("dati ricevuti", data)
-
-    } catch (error) {
-    console.error("errore")
-}
-}
-
-getRequest();
+        const proxyUrl = 'https://api.allorigins.win/get?url=';
+        const targetUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+        
+        async function getRequest() {
+            try {
+                const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
+                const data = await response.json();
+                console.log('Dati ricevuti tramite All Origins:', data);
+            } catch (error) {
+                console.error('Errore:', error.message);
+            }
+        }
+        
+        getRequest();
+        
+        
     
 
 
