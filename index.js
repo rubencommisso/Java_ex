@@ -1748,19 +1748,43 @@ f3(); */
         
         getRequest(); */
 
-        fetch('https://jsonplaceholder.typicode.com/users')
+        /* fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
         .then(users => console.log(users))
         .catch(error => console.error('Errore:', error));
-        
-    
+         */
 
 
+const promise1 = new Promise ((resolve, reject) => {
+    setTimeout (() => {
+        const success = true;
+        if(success) {
+            resolve("Operazione completata");
+        } else {
+            reject("errore");
+        }
+    }, 1000);
+});
+
+const promise2 = new Promise ((resolve, reject) => {
+    setTimeout (() => {
+        const success = true;
+        if(success) {
+            resolve("Operazione completata");
+        } else {
+            reject("errore");
+        }
+    }, 3000);
+});
 
 
-
-
-
+Promise.all([promise1,promise2])
+    .then((results) => {
+        console.log("tutti i risultati:", results);
+    })
+    .catch((error) => {
+        console.error("Errore", error);
+    });
 
 
 
