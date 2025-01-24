@@ -1787,7 +1787,7 @@ Promise.all([promise1,promise2])
     }); */
 
     
-    function setCookie(cname, cvalue, exdays) {
+/*     function setCookie(cname, cvalue, exdays) {
         const d = new Date();
         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
         let expires = "expires="+d.toUTCString();
@@ -1829,4 +1829,33 @@ Promise.all([promise1,promise2])
 
       console.log(getCookie("username"))
         
-      deleteCookie("username")
+      deleteCookie("username")   */
+
+
+function saveToLocalStorage(key, value) {
+    localStorage.setItem(key, value);
+    console.log(`Valore salvato: ${key}=${value}`);
+  }
+  
+  function getFromLocalStorage(key) {
+    const value = localStorage.getItem(key);
+    if (value !== null) {
+      console.log(`Valore recuperato: ${key}=${value}`);
+      return value;
+    } else {
+      console.log(`Nessun valore trovato per la chiave: ${key}`);
+      return null;
+    }
+  }
+  
+  function removeFromLocalStorage(key) {
+    localStorage.removeItem(key);
+    console.log(`Valore rimosso per la chiave: ${key}`);
+  }
+  
+
+  saveToLocalStorage("user", "Alice");    
+  getFromLocalStorage("user");           
+  removeFromLocalStorage("user");        
+  getFromLocalStorage("user");           
+  
