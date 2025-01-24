@@ -1832,13 +1832,13 @@ Promise.all([promise1,promise2])
       deleteCookie("username")   */
 
 
-function saveToLocalStorage(key, value) {
-    localStorage.setItem(key, value);
+function saveToSessionStorage(key, value) {
+    sessionStorage.setItem(key, value);
     console.log(`Valore salvato: ${key}=${value}`);
   }
   
-  function getFromLocalStorage(key) {
-    const value = localStorage.getItem(key);
+  function getFromSessionStorage(key) {
+    const value = sessionStorage.getItem(key);
     if (value !== null) {
       console.log(`Valore recuperato: ${key}=${value}`);
       return value;
@@ -1848,14 +1848,14 @@ function saveToLocalStorage(key, value) {
     }
   }
   
-  function removeFromLocalStorage(key) {
-    localStorage.removeItem(key);
+  function removeFromSessionStorage(key) {
+    sessionStorage.removeItem(key);
     console.log(`Valore rimosso per la chiave: ${key}`);
   }
   
 
-  saveToLocalStorage("user", "Alice");    
-  getFromLocalStorage("user");           
-  removeFromLocalStorage("user");        
-  getFromLocalStorage("user");           
+  saveToSessionStorage("user", "Alice");    
+  getFromSessionStorage("user");           
+  removeFromSessionStorage("user");        
+  getFromSessionStorage("user");           
   
