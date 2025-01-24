@@ -1831,8 +1831,37 @@ Promise.all([promise1,promise2])
         
       deleteCookie("username")   */
 
+//Local Storage
+function saveToLocalStorage(key, value) {
+    localStorage.setItem(key, value);
+    console.log(`Valore salvato: ${key}=${value}`);
+  }
+  
+  function getFromLocalStorage(key) {
+    const value = localStorage.getItem(key);
+    if (value !== null) {
+      console.log(`Valore recuperato: ${key}=${value}`);
+      return value;
+    } else {
+      console.log(`Nessun valore trovato per la chiave: ${key}`);
+      return null;
+    }
+  }
+  
+  function removeFromLocalStorage(key) {
+    localStorage.removeItem(key);
+    console.log(`Valore rimosso per la chiave: ${key}`);
+  }
+  
 
-function saveToSessionStorage(key, value) {
+  saveToLocalStorage("user", "Alice");    
+  getFromLocalStorage("user");           
+  removeFromLocalStorage("user");        
+  getFromLocalStorage("user");           
+
+
+//Session Storage
+  function saveToSessionStorage(key, value) {
     sessionStorage.setItem(key, value);
     console.log(`Valore salvato: ${key}=${value}`);
   }
@@ -1854,8 +1883,7 @@ function saveToSessionStorage(key, value) {
   }
   
 
-  saveToSessionStorage("user", "Alice");    
+  saveToSessionStorage("user", "Claudia");    
   getFromSessionStorage("user");           
   removeFromSessionStorage("user");        
-  getFromSessionStorage("user");           
-  
+  getFromSessionStorage("user");   
