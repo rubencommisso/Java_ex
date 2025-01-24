@@ -1831,7 +1831,7 @@ Promise.all([promise1,promise2])
         
       deleteCookie("username")   */
 
-//Local Storage
+/* //Local Storage
 function saveToLocalStorage(key, value) {
     localStorage.setItem(key, value);
     console.log(`Valore salvato: ${key}=${value}`);
@@ -1886,4 +1886,6 @@ function saveToLocalStorage(key, value) {
   saveToSessionStorage("user", "Claudia");    
   getFromSessionStorage("user");           
   removeFromSessionStorage("user");        
-  getFromSessionStorage("user");   
+  getFromSessionStorage("user");   */ 
+
+  
