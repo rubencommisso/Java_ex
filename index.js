@@ -1888,7 +1888,11 @@ function saveToLocalStorage(key, value) {
   removeFromSessionStorage("user");        
   getFromSessionStorage("user");   */ 
 
-  const elementId = document.querySelector("p")
+  const elementId = document.getElementById("p1")
+
+  const button = document.createElement("button")
+
+  button.style.padding = "3vw"
   
   console.log(elementId)
 
@@ -1897,3 +1901,6 @@ function saveToLocalStorage(key, value) {
   elementId.style.backgroundColor = "yellow";
 
   elementId.style.fontSize = "10vw";
+
+  elementId.appendChild(button)
+
