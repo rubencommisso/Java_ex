@@ -1888,9 +1888,11 @@ function saveToLocalStorage(key, value) {
   removeFromSessionStorage("user");        
   getFromSessionStorage("user");   */ 
 
-  const elementId = document.getElementById("p1")
+ /*  const elementId = document.getElementById("p1")
 
   const button = document.createElement("button")
+
+  
 
   button.style.padding = "3vw"
   
@@ -1903,4 +1905,27 @@ function saveToLocalStorage(key, value) {
   elementId.style.fontSize = "10vw";
 
   elementId.appendChild(button)
+ */
 
+
+
+  const father = document.querySelector("div");
+
+  const list = document.createElement("ul");
+
+  
+father.appendChild(list);
+
+const listchild = document.createElement("li");
+list.appendChild(listchild);
+listchild.innerText = "ciao";
+
+const listchild2 = document.createElement("li");
+list.appendChild(listchild2);
+listchild2.innerText = "ciao2";
+
+const listchild3 = document.createElement("li");
+list.appendChild(listchild3);
+listchild3.innerText = "ciao3";
+
+  
