@@ -7,7 +7,17 @@
 </head>
 <body>
     <div>
-        <p id="p1">Hello!</p>
+        <form action="" method="post" onsubmit="validateForm(event)">
+
+            <label for="name"></label>
+            <input type="text" id="name" name="il tuo nome" placeholder="inserisci il tuo nome...">
+
+            <label for="surname"></label>
+            <input type="text" id="surname" name="il tuo cognome" placeholder="inserisci il tuo cognome...">
+            <br>
+            <br>
+            <button id="button" type="submit">invia</button>
+        </form>
     </div>
     <script src="index.js"></script>
 </body>

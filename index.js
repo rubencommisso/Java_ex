@@ -1909,7 +1909,7 @@ function saveToLocalStorage(key, value) {
 
 
 
-  const father = document.querySelector("div");
+/*   const father = document.querySelector("div");
 
   const list = document.createElement("ul");
 
@@ -1934,7 +1934,24 @@ listchild4.innerText = "ciao4";
 
 const listchild5 = document.createElement("li");
 list.appendChild(listchild5);
-listchild5.innerText = "ciao5";
+listchild5.innerText = "ciao5"; */
+
+
+const button = document.getElementById("button");
+
+button.addEventListener("click", function validateForm(event) {
+    event.preventDefault();  
+    const name1 = document.getElementById("name").value;  
+    const surname = document.getElementById("surname").value;
+
+    if (!name1 || !surname) {
+        alert("i campi devono essere completati");
+        
+    } else {
+        alert("dati inviati con successo");
+        console.log(`Nome: ${name1}, Cognome: ${surname}`);
+    }
+});
 
 
   
