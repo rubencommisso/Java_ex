@@ -1888,6 +1888,6 @@ function saveToLocalStorage(key, value) {
   removeFromSessionStorage("user");        
   getFromSessionStorage("user");   */ 
 
-  const elementId = document.getElementById("p1")
+  const elementId = document.querySelector("p")
   
   console.log(elementId)
