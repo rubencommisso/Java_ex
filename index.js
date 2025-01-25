@@ -1893,3 +1893,7 @@ function saveToLocalStorage(key, value) {
   console.log(elementId)
 
   elementId.innerText = "Hello world!";
+
+  elementId.style.backgroundColor = "yellow";
+
+  elementId.style.fontSize = "10vw";
