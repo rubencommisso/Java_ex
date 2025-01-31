@@ -1936,7 +1936,7 @@ const listchild5 = document.createElement("li");
 list.appendChild(listchild5);
 listchild5.innerText = "ciao5"; */
 
-
+/* 
 const button = document.getElementById("button");
 
 button.addEventListener("click", function validateForm(event) {
@@ -1952,6 +1952,86 @@ button.addEventListener("click", function validateForm(event) {
         console.log(`Nome: ${name1}, Cognome: ${surname}`);
     }
 });
+ */
 
 
-  
+// dopo una chiamata API creare una lista degli elementi filtrati con postId = 1
+
+//https://jsonplaceholder.typicode.com/comments
+
+  /*    const proxyUrl = 'https://api.allorigins.win/get?url=';
+        const targetUrl = 'https://jsonplaceholder.typicode.com/posts/1';
+        
+        async function getRequest() {
+            try {
+                const response = await fetch(proxyUrl + encodeURIComponent(targetUrl));
+                const data = await response.json();
+                console.log('Dati ricevuti tramite All Origins:', data);
+            } catch (error) {
+                console.error('Errore:', error.message);
+            }
+        }
+        
+        getRequest(); */
+
+        /* fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(users => console.log(users))
+        .catch(error => console.error('Errore:', error));
+         */
+
+
+/*  const JsonUrl = 'https://jsonplaceholder.typicode.com/comments'
+
+async function getRequest() {
+    try {
+        const response = await fetch (JsonUrl)
+        const data = await response.json();
+        
+        const filteredData = data.forEach (item => getPost(item.id));
+        console.log(filteredData)
+    } catch (error) {
+        console.error('errore', error)
+    }
+} 
+
+
+const jsonPosts = 'https://jsonplaceholder.typicode.com/posts'
+
+async function getPost(n) {
+    try {
+        const response = await fetch (jsonPosts)
+        const data = await response.json();
+        const filteredData = data.filter(post => post.id === n)
+        console.log(filteredData)
+    } catch (error) {
+        console.error('errore', error)
+    }
+}  
+
+getRequest(); */
+
+
+    
+
+/*      function PrimeNumbers(n){
+        
+        let array = []
+        
+        if (n < 2 ) {
+            return array 
+        }
+        
+        for (let i = 2; i <= n; i++) {
+
+            for(let j = 2; j < i; j++) {
+
+                if (i % j == 0 ) {
+                    i = [i]
+                }
+            }
+        }
+        console.log(i)
+        }
+
+        PrimeNumbers();  */
