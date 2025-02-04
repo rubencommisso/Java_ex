@@ -15,7 +15,7 @@
         }
       }
     };
-    
+
 </script>
 
 <script>
@@ -33,7 +33,25 @@
       }
     };
   </script>
-    
+<script>
+
+tailwind.config = {
+theme: {
+  extend: {
+    colors: {
+      custom: {
+        primary: '#6D28D9', 
+        secondary: '#F59E0B', 
+        accent: '#10B981', 
+        background: '#F3F4F6', 
+        text: '#1F2937', 
+      },
+    },
+  },
+},
+plugins: [],
+};
+</script>  
     <title>Document</title>
 </head>
 <body>
@@ -64,6 +82,11 @@
             <li>uno</li>
             <li>due</li>
             <li>tre</li>
+      </div>
+
+      <div>
+        <button class="px-6 py-3 bg-custom-primary text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 hover:shadow-lg transition-all duration-200">-</button>
+        <button class="px-6 py-3 bg-custom-secondary text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg transition-all duration-200">+</button>
       </div>
     
 </body>
