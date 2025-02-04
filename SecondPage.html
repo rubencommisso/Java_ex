@@ -3,143 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com" ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            customBlue: '#1E40AF', 
-            customGreen: '#16A34A'
-          }
-        }
-      }
-    };
-
-</script>
-
-<script>
-    
-    tailwind.config = {
-      theme: {
-        extend: {
-          spacing: {
-            '72': '18rem', 
-            '84': '21rem', 
-            '96': '24rem', 
-            '108': '27rem' 
-          }
-        }
-      }
-    };
-  </script>
-<script>
-
-tailwind.config = {
-theme: {
-  extend: {
-    colors: {
-      custom: {
-        primary: '#6D28D9', 
-        secondary: '#F59E0B', 
-        accent: '#10B981', 
-        background: '#F3F4F6', 
-        text: '#1F2937', 
-      },
-    },
-  },
-},
-plugins: [],
-};
-</script>  
-
-<style>
-  .bg-custom-primary {
-    background-color: #6D28D9; /* Viola */
-  }
-  .bg-custom-secondary {
-    background-color: #F59E0B; /* Arancione */
-  }
-  .bg-custom-accent {
-    background-color: #10B981; /* Verde smeraldo */
-  }
-  .bg-custom-background {
-    background-color: #F3F4F6; /* Grigio chiaro */
-  }
-  .text-custom-text {
-    color: #1F2937; /* Testo scuro */
-  }
-  .border-custom-border {
-    border-color: #D1D5DB; /* Grigio per i bordi */
-  }
-</style>
-    <title>Document</title>
+        tailwind.config = {
+            darkMode: 'class', 
+            theme: {
+                extend: {
+                    colors: {
+                        custom: {
+                            primary: '#6D28D9', 
+                            secondary: '#F59E0B', 
+                            accent: '#10B981', 
+                            background: '#F3F4F6', 
+                            text: '#1F2937', 
+                            darkBackground: '#1F2937', 
+                            darkText: '#F3F4F6', 
+                        },
+                    },
+                },
+            },
+        };
+    </script>
+    <title>Tailwind css</title>
 </head>
-<body>
+<body class="bg-custom-background text-custom-text font-sans dark:bg-custom-darkBackground dark:text-custom-darkText">
+    <div class="container mx-auto p-6">
+        
+        <header class="mb-6">
+            <h1 class="text-4xl font-bold text-custom-primary mb-2 dark:text-custom-accent">Benvenuto nel Layout Personalizzato</h1>
+            <h2 class="text-2xl font-semibold text-custom-secondary dark:text-custom-primary">Un esempio di utilizzo della modalità scura</h2>
+        </header>
 
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+        
+        <main class="mb-6">
+            <p class="text-lg mb-4">
+                Questo layout dimostra come utilizzare i colori personalizzati e supportare la modalità scura con Tailwind CSS. Cambia lo stile automaticamente in base alle impostazioni del sistema operativo.
+            </p>
 
-      <div>
-        <p class="bg-customBlue text-white p-1 rounded"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, harum.</p>
-      </div>
+            <p class="text-lg mb-4">
+                La modalità scura è utile per migliorare la leggibilità e ridurre l'affaticamento visivo in condizioni di scarsa illuminazione.
+            </p>
 
-      <div>
-        <h1 class="font-bold text-amber-600 ">Hellohello</h1>
-        <h2 class="text-xl text-blue-700">halo</h2>
-        <p class="leading-relaxed text-green-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis alias cum non?</p>
-       </div>
+            <a href="#" class="text-custom-accent underline hover:text-custom-primary dark:hover:text-custom-secondary">
+                Scopri di più sulla modalità scura
+            </a>
+        </main>
 
-   <!--     <div>
-        <ul class="text-violet-600">
-            <li>uno</li>
-            <li>due</li>
-            <li>tre</li>
-        </ul>
-       </div> -->
-  <!--      <div class="md:container mx-auto p-0.5 bg-yellow-100 m-4">
-        <ul class="text-violet-600 m-72">
-            <li>uno</li>
-            <li>due</li>
-            <li>tre</li>
-      </div> -->
-
-      <div>
-        <button class="px-6 py-3 bg-custom-primary text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 hover:shadow-lg transition-all duration-200">-</button>
-        <button class="px-6 py-3 bg-custom-secondary text-white font-semibold rounded-lg shadow-md hover:bg-orange-600 hover:shadow-lg transition-all duration-200">+</button>
-      </div>
-
-      <br>
-
-      <div class="max-w-4xl mx-auto space-y-6">
-        <!-- Sezione 1: Div con sfondo personalizzato -->
-        <div class="bg-custom-primary p-6 rounded-lg shadow-md">
-          <h2 class="text-2xl font-bold text-white">Sezione 1</h2>
-          <p class="mt-2 text-white opacity-90">Questo è un div con uno sfondo personalizzato (colore primario).</p>
-        </div>
-      <br>
-
-      <div class="container mx-auto p-6">
-        <!-- Header -->
-        <div class="mb-6">
-            <h1 class="text-4xl font-bold text-custom-primary mb-2">Benvenuto nel Layout Personalizzato</h1>
-            <h2 class="text-2xl font-semibold text-custom-secondary">Un esempio di utilizzo della palette personalizzata</h2>
-        </div>
-
-        <div class="mb-6">
-
-        <p class="text-lg mb-4">
-          Questo layout dimostra come utilizzare i colori personalizzati definiti nella configurazione di Tailwind CSS per creare uno stile unico e coerente. Puoi personalizzare titoli, paragrafi, link e altro ancora.
-        </p>
-       
-        <a href="#" class="text-custom-accent underline hover:text-custom-primary">
-          Scopri di più sui colori personalizzati
-        </a>
-
-        </div>
-
-    
+        
+        <footer class="pt-4 border-t border-custom-border dark:border-custom-accent">
+            <p class="text-sm text-custom-text dark:text-custom-darkText">
+                © 2025 Layout Personalizzato. Tutti i diritti riservati.
+            </p>
+        </footer>
+    </div>
 </body>
-</html>
 </html>
