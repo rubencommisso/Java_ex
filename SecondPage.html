@@ -18,43 +18,54 @@
                             text: '#1F2937', 
                             darkBackground: '#1F2937', 
                             darkText: '#F3F4F6', 
+                            darkAccent: '#F59E0B' 
                         },
                     },
                 },
             },
         };
     </script>
-    <title>Tailwind css</title>
+    <title>Dark Mode Dynamic Layout</title>
 </head>
 <body class="bg-custom-background text-custom-text font-sans dark:bg-custom-darkBackground dark:text-custom-darkText">
     <div class="container mx-auto p-6">
-        
+        <!-- Header -->
         <header class="mb-6">
-            <h1 class="text-4xl font-bold text-custom-primary mb-2 dark:text-custom-accent">Benvenuto nel Layout Personalizzato</h1>
-            <h2 class="text-2xl font-semibold text-custom-secondary dark:text-custom-primary">Un esempio di utilizzo della modalità scura</h2>
+            <h1 class="text-4xl font-bold text-custom-primary mb-2 dark:text-custom-accent">Titolo in modalità chiara/scura</h1>
+            <h2 class="text-2xl font-semibold text-custom-secondary dark:text-custom-primary">Sottotitolo che cambia con la modalità</h2>
         </header>
 
-        
+        <!-- Main Content -->
         <main class="mb-6">
-            <p class="text-lg mb-4">
-                Questo layout dimostra come utilizzare i colori personalizzati e supportare la modalità scura con Tailwind CSS. Cambia lo stile automaticamente in base alle impostazioni del sistema operativo.
-            </p>
+            <section class="mb-4">
+                <h3 class="text-xl font-medium text-custom-secondary dark:text-custom-accent">Sezione principale</h3>
+                <p class="text-lg mb-4">
+                    Questo layout utilizza Tailwind CSS per supportare la modalità chiara e scura. Cambia sfondi e colori del testo dinamicamente.
+                </p>
+                <p class="text-lg">
+                    Puoi passare dalla modalità chiara alla scura per vedere come i colori si adattano automaticamente.
+                </p>
+            </section>
 
-            <p class="text-lg mb-4">
-                La modalità scura è utile per migliorare la leggibilità e ridurre l'affaticamento visivo in condizioni di scarsa illuminazione.
-            </p>
+            <section class="mb-6">
+                <h3 class="text-xl font-medium text-custom-primary dark:text-custom-secondary">Altra sezione</h3>
+                <p class="text-lg">
+                    La modalità scura utilizza uno sfondo più scuro e un testo chiaro per migliorare il contrasto.
+                </p>
+            </section>
 
-            <a href="#" class="text-custom-accent underline hover:text-custom-primary dark:hover:text-custom-secondary">
-                Scopri di più sulla modalità scura
+            <a href="#" class="text-custom-accent underline hover:text-custom-primary dark:hover:text-custom-darkAccent">
+                Scopri di più su Tailwind e la modalità scura
             </a>
         </main>
 
-        
-        <footer class="pt-4 border-t border-custom-border dark:border-custom-accent">
+        <!-- Footer -->
+        <footer class="pt-4 border-t border-custom-border dark:border-custom-secondary">
             <p class="text-sm text-custom-text dark:text-custom-darkText">
-                © 2025 Layout Personalizzato. Tutti i diritti riservati.
+                © 2025 Layout Personalizzato. Modalità chiara e scura supportate.
             </p>
         </footer>
     </div>
 </body>
 </html>
+
