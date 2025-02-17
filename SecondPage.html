@@ -6,144 +6,134 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-            darkMode: 'class', 
-                    theme: {
-                        extend: {
-                             spacing: {
-                                '72': '18rem',
-                                '84': '21rem',
-                                '96': '24rem',
-                                '128': '32rem', // Aggiunge un valore personalizzato (32rem)
-                                'custom-margin': '5rem', // Margine personalizzato
-                                'custom-padding': '4rem', // Padding personalizzato
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    spacing: {
+                        '72': '18rem',
+                        '84': '21rem',
+                        '96': '24rem',
+                        '128': '32rem',
+                        'custom-margin': '5rem',
+                        'custom-padding': '4rem',
                     },
                     colors: {
                         custom: {
-                            primary: '#8A4FDD', 
+                            primary: '#8A4FDD',
                             secondary: '#F59E0B',
-                            accent: '#10B981', 
-                            background: '#F3F4F6', 
-                            text: '#1F2937', 
-                            darkBackground: '#1F2937', 
-                            darkText: '#F3F4F6', 
-                            darkAccent: '#F59E0B' 
+                            accent: '#10B981',
+                            background: '#F3F4F6',
+                            text: '#1F2937',
+                            darkBackground: '#1F2937',
+                            darkText: '#F3F4F6',
+                            darkAccent: '#F59E0B'
                         },
                     },
                 },
             },
         };
     </script>
-    <title>Dark Mode Dynamic Layout</title>
+    <title>Form con Elementi Disabilitati</title>
 </head>
 <body class="bg-custom-background text-custom-text font-sans dark:bg-custom-darkBackground dark:text-custom-darkText">
-<br>
-
-<div class="bg-white dark:bg-custom-darkBackground rounded-lg shadow-2xl overflow-hidden w-96">
-    <!-- Immagine -->
-    <img 
-        src="https://via.placeholder.com/400x200" 
-        alt="Placeholder" 
-        class="w-full h-48 object-cover"
-    >
-
-    <!-- Contenuto -->
-    <div class="p-6">
-        <!-- Titolo -->
-        <h2 class="text-2xl font-bold text-custom-primary dark:text-custom-accent mb-2">
-            Titolo della Card
-        </h2>
-
-        <!-- Descrizione -->
-        <p class="text-custom-text dark:text-custom-darkText mb-4">
-           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus, praesentium!
-        </p>
-
-        <!-- Pulsante -->
-        <a 
-            href="#" 
-            class="inline-block bg-custom-primary text-white px-6 py-2 rounded-lg hover:bg-custom-secondary transition duration-300"
-        >
-            Scopri di più
-        </a>
-    </div>
-</div>
-</div>
-
-  <div class="shadow-lg rounded-lg p-custom-padding">
-    <button id="darkModeButton" class="px-4 py-2 bg-custom-primary text-white rounded-lg hover:bg-custom-secondary">
-      attiva Dark Mode
-    </button>
-  </div>
     <div class="container mx-auto p-6">
-        <!-- Header -->
-        <header class="mb-6">
-            <h1 class="text-4xl font-bold text-custom-primary mb-2 dark:text-custom-accent p-custom-margin">Titolo in modalità chiara/scura</h1>
-            <h2 class="text-2xl font-semibold text-custom-secondary dark:text-custom-primary">Sottotitolo che cambia con la modalità</h2>
-        </header>
+        <!-- Form -->
+        <form class="max-w-lg mx-auto">
+            <!-- Campo Nome -->
+            <div class="mb-6">
+                <label for="name" class="block text-lg font-medium text-custom-primary dark:text-custom-accent mb-2">
+                    Nome
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-custom-primary focus:border-custom-secondary focus:ring-2 focus:ring-custom-accent focus:outline-none transition duration-300 dark:bg-custom-darkBackground dark:border-custom-accent dark:focus:border-custom-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="Inserisci il tuo nome"
+                    disabled
+                >
+            </div>
 
-        <!-- Main Content -->
-        <main class="mb-6">
-            <section class="mb-4">
-                <h3 class="text-xl font-medium text-custom-secondary dark:text-custom-accent">Sezione principale</h3>
-                <p class="text-lg mb-4">
-                    Questo layout utilizza Tailwind CSS per supportare la modalità chiara e scura. Cambia sfondi e colori del testo dinamicamente.
-                </p>
-                <p class="text-lg">
-                    Puoi passare dalla modalità chiara alla scura per vedere come i colori si adattano automaticamente.
-                </p>
-            </section>
+            <!-- Campo Email -->
+            <div class="mb-6">
+                <label for="email" class="block text-lg font-medium text-custom-primary dark:text-custom-accent mb-2">
+                    Email
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-custom-primary focus:border-custom-secondary focus:ring-2 focus:ring-custom-accent focus:outline-none transition duration-300 dark:bg-custom-darkBackground dark:border-custom-accent dark:focus:border-custom-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="Inserisci la tua email"
+                    disabled
+                >
+            </div>
 
-            <section class="mb-6">
-                <h3 class="text-xl font-medium text-custom-primary dark:text-custom-secondary">Altra sezione</h3>
-                <p class="text-lg">
-                    La modalità scura utilizza uno sfondo più scuro e un testo chiaro per migliorare il contrasto.
-                </p>
+            <!-- Campo Messaggio -->
+            <div class="mb-6">
+                <label for="message" class="block text-lg font-medium text-custom-primary dark:text-custom-accent mb-2">
+                    Messaggio
+                </label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="w-full px-4 py-2 rounded-lg border-2 border-custom-primary focus:border-custom-secondary focus:ring-2 focus:ring-custom-accent focus:outline-none transition duration-300 dark:bg-custom-darkBackground dark:border-custom-accent dark:focus:border-custom-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+                    placeholder="Scrivi il tuo messaggio"
+                    disabled
+                ></textarea>
+            </div>
 
-            </section>
-            <section>
-                <div>
-                    <button class="bg-primary text-custom-secondary font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-custom-primary transition duration-300">+</button>
-
-                    <button class="bg-primary text-custom-primary font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-custom-accent transition duration-700">+</button>
-
-                    <button class="bg-primary text-custom-accent font-semibold py-3 px-6 rounded-lg shadow-md hover:bg-custom-darkBackground transition duration-100">+</button>
-                </div>
-                <br>
-                <div>
-                    <input class="focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
-                    <button class="active:bg-green-500 active:scale-95 py-3 px-6 rounded-lg shadow-md">
-                        Cliccami
-                    </button>
-                </div>
-            </section>
-
-            <a href="#" class="text-custom-accent underline hover:text-custom-primary dark:hover:text-custom-darkAccent">
-                Scopri di più su Tailwind e la modalità scura
-            </a>
-        </main>
-
-        <!-- Footer -->
-        <footer class="pt-4 border-t border-custom-border dark:border-custom-secondary">
-            <p class="text-sm text-custom-text dark:text-custom-darkText">
-                © 2025 Layout Personalizzato. Modalità chiara e scura supportate.
-            </p>
-        </footer>
-
+            <!-- Pulsanti -->
+            <div class="flex gap-4">
+                <button
+                    type="submit"
+                    class="flex-1 bg-custom-primary text-white px-6 py-2 rounded-lg hover:bg-custom-secondary transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                >
+                    Invia (Disabilitato)
+                </button>
+                <button
+                    type="button"
+                    class="flex-1 bg-custom-accent text-white px-6 py-2 rounded-lg hover:bg-custom-secondary transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    Abilita Tutto
+                </button>
+            </div>
+        </form>
     </div>
+
+    <!-- Bottone per attivare/disattivare la modalità scura -->
+    <div class="fixed bottom-4 right-4">
+        <button id="darkModeButton" class="px-4 py-2 bg-custom-primary text-white rounded-lg hover:bg-custom-secondary transition duration-300">
+            Attiva Dark Mode
+        </button>
+    </div>
+
     <script>
-      const button = document.getElementById("darkModeButton")
-      const htmlElement = document.documentElement
+        const button = document.getElementById("darkModeButton");
+        const htmlElement = document.documentElement;
 
-      button.addEventListener('click', () => {
-        if (htmlElement.classList.contains('dark')) {
-          htmlElement.classList.remove('dark')
-          toggleButton.textContent = 'Attiva modalità scura';
-        } else {
-          htmlElement.classList.add('dark');
-          toggleButton.textContent = 'Disattiva modalità scura';
-        }
+        button.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                button.textContent = 'Attiva modalità scura';
+            } else {
+                htmlElement.classList.add('dark');
+                button.textContent = 'Disattiva modalità scura';
+            }
+        });
 
-      })
+        // Script per abilitare/disabilitare gli elementi del form
+        const enableButton = document.querySelector('button[type="button"]');
+        const formElements = document.querySelectorAll('input, textarea, button[type="submit"]');
+
+        enableButton.addEventListener('click', () => {
+            formElements.forEach(element => {
+                element.disabled = !element.disabled;
+            });
+            enableButton.textContent = enableButton.textContent.includes('Abilita') ? 'Disabilita Tutto' : 'Abilita Tutto';
+        });
     </script>
 </body>
 </html>
