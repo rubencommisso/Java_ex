@@ -7,8 +7,16 @@
     <script>
         tailwind.config = {
             darkMode: 'class', 
-            theme: {
-                extend: {
+                    theme: {
+                        extend: {
+                             spacing: {
+                                '72': '18rem',
+                                '84': '21rem',
+                                '96': '24rem',
+                                '128': '32rem', // Aggiunge un valore personalizzato (32rem)
+                                'custom-margin': '5rem', // Margine personalizzato
+                                'custom-padding': '4rem', // Padding personalizzato
+                    },
                     colors: {
                         custom: {
                             primary: '#6D28D9', 
@@ -28,10 +36,16 @@
     <title>Dark Mode Dynamic Layout</title>
 </head>
 <body class="bg-custom-background text-custom-text font-sans dark:bg-custom-darkBackground dark:text-custom-darkText">
+<br>
+  <div class="shadow-lg rounded-lg p-custom-padding">
+    <button id="darkModeButton" class="px-4 py-2 bg-custom-primary text-white rounded-lg hover:bg-custom-secondary">
+      attiva Dark Mode
+    </button>
+  </div>
     <div class="container mx-auto p-6">
         <!-- Header -->
         <header class="mb-6">
-            <h1 class="text-4xl font-bold text-custom-primary mb-2 dark:text-custom-accent">Titolo in modalità chiara/scura</h1>
+            <h1 class="text-4xl font-bold text-custom-primary mb-2 dark:text-custom-accent p-custom-margin">Titolo in modalità chiara/scura</h1>
             <h2 class="text-2xl font-semibold text-custom-secondary dark:text-custom-primary">Sottotitolo che cambia con la modalità</h2>
         </header>
 
@@ -66,6 +80,20 @@
             </p>
         </footer>
     </div>
+    <script>
+      const button = document.getElementById("darkModeButton")
+      const htmlElement = document.documentElement
+
+      button.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+          htmlElement.classList.remove('dark')
+          toggleButton.textContent = 'Attiva modalità scura';
+        } else {
+          htmlElement.classList.add('dark');
+          toggleButton.textContent = 'Disattiva modalità scura';
+        }
+      })
+    </script>
 </body>
 </html>
 
