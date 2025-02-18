@@ -2036,4 +2036,17 @@ getRequest(); */
 
         PrimeNumbers();  */
 
+        const button = document.getElementById("button");
+        const name1 = document.getElementById("nome");
+        const surname1 = document.getElementById("cognome");
         
+        button.addEventListener("click", () => {
+            // Controlla se il campo "nome" è vuoto
+            if (name1.value.trim() === "" || surname1.value.trim() === "") {
+                alert("Inserire dati in entrambi i campi!");
+            } else {
+                console.log("Nome:", name1.value);
+                console.log("Cognome:", surname1.value);
+                alert(`Dati inseriti: ${name1.value} ${surname1.value}`);
+            }
+        });
