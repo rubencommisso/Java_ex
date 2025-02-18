@@ -3,57 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Tailwind Centrato</title>
+    <title>Layout con Flex-Wrap</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
     <!-- Contenitore principale centrato -->
-    <div class="min-h-screen flex justify-center items-center">
+    <div class="min-h-screen flex justify-center items-center p-4">
         <div class="container mx-auto p-4">
-            <!-- Contenitore Flex per le colonne -->
-            <div class="flex flex-row gap-4">
+            <!-- Contenitore Flex con wrap -->
+            <div class="flex flex-wrap gap-4 justify-center">
                 <!-- Colonna 1 -->
-                <div class="flex-1 bg-blue-500 p-6 text-white rounded-lg shadow-md">
+                <div class="flex-1 min-w-[1050px] bg-blue-500 p-6 text-white rounded-lg shadow-md">
                     <h2 class="text-xl font-bold mb-2">Colonna 1</h2>
                     <p>Contenuto della prima colonna.</p>
                 </div>
 
                 <!-- Colonna 2 -->
-                <div class="flex-1 bg-green-500 p-6 text-white rounded-lg shadow-md">
+                <div class="flex-1 min-w-[250px] bg-green-500 p-6 text-white rounded-lg shadow-md">
                     <h2 class="text-xl font-bold mb-2">Colonna 2</h2>
                     <p>Contenuto della seconda colonna.</p>
                 </div>
 
                 <!-- Colonna 3 -->
-                <div class="flex-1 bg-red-500 p-6 text-white rounded-lg shadow-md">
+                <div class="flex-1 min-w-[250px] bg-red-500 p-6 text-white rounded-lg shadow-md">
                     <h2 class="text-xl font-bold mb-2">Colonna 3</h2>
                     <p>Contenuto della terza colonna.</p>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Secondo contenitore centrato -->
-    <div class="min-h-screen flex justify-center items-center">
-        <div class="flex flex-col gap-4 w-full max-w-2xl px-4">
-            <!-- Colonna 1 -->
-            <div class="flex-1 bg-blue-500 p-6 text-white rounded-lg shadow-md">
-                <h2 class="text-xl font-bold mb-2">Colonna 1</h2>
-                <p>Contenuto della prima colonna.</p>
-            </div>
-
-            <!-- Colonna 2 -->
-            <div class="flex-1 bg-green-500 p-6 text-white rounded-lg shadow-md">
-                <h2 class="text-xl font-bold mb-2">Colonna 2</h2>
-                <p>Contenuto della seconda colonna.</p>
-            </div>
-
-            <!-- Colonna 3 -->
-            <div class="flex-1 bg-red-500 p-6 text-white rounded-lg shadow-md">
-                <h2 class="text-xl font-bold mb-2">Colonna 3</h2>
-                <p>Contenuto della terza colonna.</p>
             </div>
         </div>
     </div>
