@@ -1,49 +1,41 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layout Responsive con Tailwind</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Griglia Responsive con Tailwind</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
 
-  <!-- Header -->
-  <header class="bg-blue-600 text-white p-4 text-center">
-    <h1 class="text-2xl font-bold">Il Mio Sito</h1>
-  </header>
+    <!-- Contenitore principale centrato -->
+    <div class="min-h-screen flex justify-center items-center p-4">
+        <div class="container mx-auto p-4">
+            <!-- Griglia responsive -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Colonna 1 -->
+                <div class="bg-blue-500 p-6 text-white rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Colonna 1</h2>
+                    <p>Contenuto della prima colonna.</p>
+                </div>
 
-  <!-- Contenuto principale -->
-  <main class="p-4">
-    <div class="container mx-auto">
-      <!-- Flex container che cambia direzione in base alla dimensione dello schermo -->
-      <div class="flex flex-col sm:flex-col md:flex-row gap-4">
-        
-        <!-- Sidebar -->
-        <aside class="bg-green-500 text-white p-4 md:w-1/4">
-          <h2 class="text-xl font-bold mb-2">Sidebar</h2>
-          <p>Contenuto della sidebar.</p>
-        </aside>
-        
-        <!-- Contenuto principale -->
-        <section class="bg-red-500 text-white p-4 flex-1">
-          <h2 class="text-xl font-bold mb-2">Contenuto Principale</h2>
-          <p>
-            Su dispositivi piccoli la sidebar viene visualizzata sopra o sotto questo contenuto,
-            mentre su dispositivi più grandi le due sezioni sono affiancate.
-          </p>
-        </section>
-        
-      </div>
+                <!-- Colonna 2 -->
+                <div class="bg-green-500 p-6 text-white rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Colonna 2</h2>
+                    <p>Contenuto della seconda colonna.</p>
+                </div>
+
+                <!-- Colonna 3 -->
+                <div class="bg-red-500 p-6 text-white rounded-lg shadow-md">
+                    <h2 class="text-xl font-bold mb-2">Colonna 3</h2>
+                    <p>Contenuto della terza colonna.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white p-4 text-center">
-    <p>&copy; 2025 Il Mio Sito</p>
-  </footer>
 
 </body>
 </html>
+
 
